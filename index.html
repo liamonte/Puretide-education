@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Education | Pure Tide Wellness</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --teal-deep:   #1C4855;
+    --teal-mid:    #2a5f70;
+    --skyre:       #6EB4CC;
+    --skyre-light: #d4eaf3;
+    --skyre-pale:  #eef6fa;
+    --sage:        #B5CAAE;
+    --sage-light:  #e8ede6;
+    --beige:       #D2BFA0;
+    --eucalyptus:  #526853;
+    --mineral:     #EFEFEF;
+    --white:       #FFFFFF;
+    --text-dark:   #1C4855;
+    --text-mid:    #3a6070;
+    --text-light:  #7a9aaa;
+    --border:      #dde8ed;
+  }
+
+  body {
+    font-family: 'Outfit', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: var(--mineral);
+    color: var(--text-dark);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 48px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-logo { display: flex; align-items: center; text-decoration: none; height: 28px; }
+  .nav-logo svg { height: 28px; width: auto; }
+  .nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
+  .nav-links a {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.16em;
+    color: var(--text-light); text-decoration: none; text-transform: uppercase; transition: color 0.2s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--teal-deep); }
+  .nav-cta {
+    background: var(--teal-deep) !important; color: #fff !important;
+    padding: 10px 22px; border-radius: 4px; transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--teal-mid) !important; }
+
+  /* HERO */
+  .hero {
+    background: var(--teal-deep);
+    background-image: linear-gradient(150deg, #0e1f25 0%, #1C4855 45%, #22637a 100%);
+    padding: 112px 48px 88px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-orb { position: absolute; border-radius: 50%; pointer-events: none; }
+  .hero-orb-1 {
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(110,180,204,0.11) 0%, transparent 70%);
+    top: -250px; left: 50%; transform: translateX(-50%);
+  }
+  .hero-orb-2 {
+    width: 350px; height: 350px;
+    background: radial-gradient(circle, rgba(181,202,174,0.08) 0%, transparent 70%);
+    bottom: -80px; right: -80px;
+  }
+  .hero-badge-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 28px; position: relative; }
+  .hero-tag {
+    display: inline-block;
+    background: rgba(110,180,204,0.15);
+    color: var(--skyre);
+    font-size: 10px; font-weight: 700; letter-spacing: 0.26em;
+    text-transform: uppercase; padding: 7px 20px; border-radius: 100px;
+    border: 1px solid rgba(110,180,204,0.22);
+  }
+  .hero-tag-canada {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.75);
+    font-size: 10px; font-weight: 600; letter-spacing: 0.18em;
+    text-transform: uppercase; padding: 7px 18px; border-radius: 100px;
+    border: 1px solid rgba(255,255,255,0.14);
+  }
+  .hero-tag-canada a { color: var(--skyre); text-decoration: none; font-weight: 700; }
+  .hero-tag-canada a:hover { text-decoration: underline; }
+  .hero h1 {
+    font-size: clamp(34px, 5.5vw, 58px); font-weight: 700; color: #fff;
+    line-height: 1.1; margin-bottom: 22px; letter-spacing: -0.02em; position: relative;
+  }
+  .hero p {
+    font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.65);
+    max-width: 500px; margin: 0 auto 44px; letter-spacing: 0.01em; position: relative;
+  }
+  .hero-actions { display: flex; gap: 14px; justify-content: center; position: relative; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-block; background: var(--skyre); color: #fff;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.16em;
+    padding: 14px 36px; border-radius: 4px; text-decoration: none;
+    text-transform: uppercase; transition: all 0.2s;
+  }
+  .btn-primary:hover { background: #7fc3da; transform: translateY(-1px); }
+  .btn-ghost {
+    display: inline-block; background: transparent; color: rgba(255,255,255,0.7);
+    font-size: 11px; font-weight: 600; letter-spacing: 0.16em;
+    padding: 14px 36px; border-radius: 4px; text-decoration: none;
+    text-transform: uppercase; border: 1px solid rgba(255,255,255,0.18); transition: all 0.2s;
+  }
+  .btn-ghost:hover { border-color: rgba(255,255,255,0.4); color: #fff; }
+
+  /* WAVE DIVIDER */
+  .wave-divider { display: block; width: 100%; overflow: hidden; line-height: 0; margin-bottom: -2px; }
+  .wave-divider svg { display: block; width: 100%; }
+
+  /* LAYOUT */
+  .section { padding: 88px 48px; }
+  .section-alt { background: var(--white); }
+  .section-dark { background: var(--teal-deep); }
+  .section-sage { background: #f5f7f4; }
+  .section-mineral { background: var(--mineral); }
+
+  /* subtle dot bg for accent sections */
+  .section-dotted {
+    background-color: var(--white);
+    background-image: radial-gradient(var(--border) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  .section-grid {
+    background-color: var(--skyre-pale);
+    background-image: linear-gradient(var(--border) 1px, transparent 1px),
+                      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .container { max-width: 980px; margin: 0 auto; }
+  .section-eyebrow { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+  .section-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.26em; text-transform: uppercase; color: var(--skyre); }
+  .section-tag-light { color: rgba(110,180,204,0.7); }
+  .tag-line { flex: 1; height: 1px; background: var(--border); max-width: 48px; }
+  .tag-line-light { background: rgba(255,255,255,0.15); }
+
+  .section-title {
+    font-size: clamp(26px, 4vw, 42px); font-weight: 700; color: var(--teal-deep);
+    line-height: 1.12; margin-bottom: 16px; letter-spacing: -0.02em;
+  }
+  .section-title-light { color: #fff; }
+  .section-subtitle {
+    font-size: 16px; font-weight: 400; color: var(--text-mid);
+    max-width: 620px; margin-bottom: 52px; line-height: 1.75;
+  }
+  .section-subtitle-light { color: rgba(255,255,255,0.55); }
+
+  /* TWO COL */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  @media (max-width: 700px) { .two-col { grid-template-columns: 1fr; } }
+
+  .peptide-visual {
+    background: linear-gradient(145deg, var(--skyre-pale) 0%, var(--skyre-light) 100%);
+    border: 1px solid var(--border); border-radius: 16px; padding: 56px 36px;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  .peptide-visual::before {
+    content: '';
+    position: absolute; bottom: -40px; right: -40px;
+    width: 160px; height: 160px;
+    background: radial-gradient(circle, rgba(110,180,204,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .chain { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 24px; position: relative; }
+  .amino { background: var(--teal-deep); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; padding: 9px 15px; border-radius: 4px; text-transform: uppercase; }
+  .amino.light { background: var(--skyre); }
+  .amino.lighter { background: var(--sage); color: var(--teal-deep); }
+  .chain-label { font-size: 11px; font-weight: 600; color: var(--text-light); letter-spacing: 0.16em; text-transform: uppercase; }
+
+  .content-text h3 { font-size: 26px; font-weight: 700; color: var(--teal-deep); margin-bottom: 16px; letter-spacing: -0.02em; }
+  .content-text p { font-size: 15px; color: var(--text-mid); margin-bottom: 18px; line-height: 1.8; }
+  .fact-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+  .fact-chip {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--skyre-pale); border: 1px solid var(--skyre-light);
+    border-radius: 4px; padding: 8px 14px; font-size: 12px; font-weight: 600;
+    color: var(--teal-deep); letter-spacing: 0.02em;
+  }
+  .fact-chip::before { content: '+'; font-size: 13px; color: var(--skyre); font-weight: 700; }
+
+  /* STEPS */
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; }
+  .step-card {
+    background: var(--mineral); border: 1px solid var(--border); border-radius: 10px;
+    padding: 32px 24px; position: relative; transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .step-card:hover { border-color: var(--skyre-light); box-shadow: 0 4px 24px rgba(110,180,204,0.12); }
+  .step-number {
+    width: 36px; height: 36px; background: var(--teal-deep); color: #fff; border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 800; letter-spacing: 0.04em; margin-bottom: 20px;
+  }
+  .step-card h4 { font-size: 13px; font-weight: 700; color: var(--teal-deep); margin-bottom: 10px; letter-spacing: 0.1em; text-transform: uppercase; }
+  .step-card p { font-size: 14px; color: var(--text-mid); line-height: 1.75; }
+
+  /* LYOPHILIZATION */
+  .lyoph-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  @media (max-width: 700px) { .lyoph-grid { grid-template-columns: 1fr; } }
+  .lyoph-visual {
+    background: linear-gradient(145deg, var(--teal-deep) 0%, var(--teal-mid) 100%);
+    border-radius: 16px; padding: 40px 32px; position: relative; overflow: hidden;
+  }
+  .lyoph-visual::before {
+    content: '';
+    position: absolute; top: -40px; right: -40px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(110,180,204,0.18) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .lyoph-steps { display: flex; flex-direction: column; gap: 20px; position: relative; }
+  .lyoph-step { display: flex; align-items: flex-start; gap: 16px; }
+  .lyoph-num {
+    width: 32px; height: 32px; min-width: 32px; background: rgba(110,180,204,0.2);
+    border: 1px solid rgba(110,180,204,0.35); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 800; color: var(--skyre);
+  }
+  .lyoph-step-text h5 { font-size: 13px; font-weight: 700; color: #fff; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 4px; }
+  .lyoph-step-text p { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.6; }
+  .lyoph-content h3 { font-size: 24px; font-weight: 700; color: var(--teal-deep); margin-bottom: 16px; letter-spacing: -0.02em; }
+  .lyoph-content p { font-size: 15px; color: var(--text-mid); margin-bottom: 18px; line-height: 1.8; }
+  .bac-box {
+    background: var(--skyre-pale); border: 1px solid var(--skyre-light);
+    border-radius: 10px; padding: 20px 24px; margin-top: 8px;
+  }
+  .bac-box h5 { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--skyre); margin-bottom: 10px; }
+  .bac-box ul { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+  .bac-box ul li { font-size: 13px; color: var(--text-mid); display: flex; align-items: center; gap: 8px; }
+  .bac-box ul li::before { content: '+'; font-weight: 800; color: var(--skyre); font-size: 13px; }
+
+  /* PRODUCT CTA STRIP */
+  .product-cta-strip {
+    background: linear-gradient(135deg, var(--teal-deep) 0%, #22637a 100%);
+    border-radius: 12px; padding: 36px 40px;
+    display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+    margin-top: 48px; position: relative; overflow: hidden;
+  }
+  .product-cta-strip::before {
+    content: '';
+    position: absolute; right: -60px; top: -60px;
+    width: 220px; height: 220px;
+    background: radial-gradient(circle, rgba(110,180,204,0.18) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .product-cta-strip-text h4 { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 6px; letter-spacing: -0.01em; }
+  .product-cta-strip-text p { font-size: 14px; color: rgba(255,255,255,0.58); letter-spacing: 0.01em; }
+
+  .btn-skyre {
+    display: inline-block; background: var(--skyre); color: #fff;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.16em;
+    padding: 13px 30px; border-radius: 4px; text-decoration: none;
+    text-transform: uppercase; transition: all 0.2s; white-space: nowrap; position: relative;
+  }
+  .btn-skyre:hover { background: #7fc3da; transform: translateY(-1px); }
+  .btn-teal {
+    display: inline-block; background: var(--teal-deep); color: #fff;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.16em;
+    padding: 13px 28px; border-radius: 4px; text-decoration: none;
+    text-transform: uppercase; transition: all 0.2s;
+  }
+  .btn-teal:hover { background: var(--teal-mid); transform: translateY(-1px); }
+  .btn-outline-teal {
+    display: inline-block; background: transparent; color: var(--teal-deep);
+    font-size: 11px; font-weight: 700; letter-spacing: 0.16em;
+    padding: 12px 28px; border-radius: 4px; text-decoration: none;
+    text-transform: uppercase; border: 1px solid var(--teal-deep); transition: all 0.2s;
+  }
+  .btn-outline-teal:hover { background: var(--teal-deep); color: #fff; }
+
+  /* COMPARE TABLE */
+  .compare-wrap { overflow-x: auto; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 4px 40px rgba(28,72,85,0.08); }
+  table { width: 100%; border-collapse: collapse; background: var(--white); }
+  thead { background: var(--teal-deep); }
+  thead th { padding: 18px 22px; text-align: left; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; color: rgba(255,255,255,0.75); text-transform: uppercase; }
+  thead th:first-child { border-radius: 10px 0 0 0; }
+  thead th:last-child { border-radius: 0 10px 0 0; }
+  thead th.highlight-col { background: rgba(110,180,204,0.22); color: var(--skyre); }
+  tbody tr { border-bottom: 1px solid var(--border); }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:nth-child(even) { background: var(--mineral); }
+  tbody td { padding: 15px 22px; font-size: 14px; color: var(--text-mid); vertical-align: middle; }
+  tbody td:first-child { font-weight: 600; color: var(--teal-deep); }
+  tbody td.highlight-col { background: rgba(110,180,204,0.07); font-weight: 600; color: var(--teal-deep); }
+  .badge { display: inline-block; font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 3px; letter-spacing: 0.08em; text-transform: uppercase; }
+  .badge-green  { background: rgba(82,104,83,0.1); color: var(--eucalyptus); }
+  .badge-teal   { background: var(--skyre-light); color: var(--teal-deep); }
+  .badge-grey   { background: #eef1f3; color: #7a8fa0; }
+  .compare-note { font-size: 13px; color: var(--text-mid); margin-top: 18px; padding: 16px 20px; background: var(--skyre-pale); border-left: 3px solid var(--skyre); border-radius: 0 8px 8px 0; line-height: 1.75; }
+
+  /* RETA PRODUCT CTA */
+  .reta-cta {
+    margin-top: 32px; background: var(--white); border: 1px solid var(--border);
+    border-radius: 12px; padding: 28px 32px;
+    display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+    box-shadow: 0 2px 20px rgba(28,72,85,0.06);
+  }
+  .reta-cta-icon { width: 52px; height: 52px; background: var(--skyre-pale); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 22px; }
+  .reta-cta-body { flex: 1; min-width: 200px; }
+  .reta-cta-body .overline { font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--skyre); margin-bottom: 4px; }
+  .reta-cta-body h4 { font-size: 17px; font-weight: 700; color: var(--teal-deep); margin-bottom: 4px; letter-spacing: -0.01em; }
+  .reta-cta-body p { font-size: 13px; color: var(--text-light); }
+
+  /* PRODUCTS GRID */
+  .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 8px; }
+  .product-card {
+    background: var(--white); border: 1px solid var(--border); border-radius: 10px;
+    padding: 28px 24px; text-decoration: none; display: block; transition: all 0.22s;
+    position: relative; overflow: hidden;
+  }
+  .product-card::after {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--skyre), var(--teal-deep));
+    transform: scaleX(0); transform-origin: left; transition: transform 0.25s;
+  }
+  .product-card:hover { border-color: var(--skyre-light); box-shadow: 0 6px 32px rgba(28,72,85,0.1); transform: translateY(-2px); }
+  .product-card:hover::after { transform: scaleX(1); }
+  .product-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--skyre); margin-bottom: 10px; }
+  .product-card h4 { font-size: 18px; font-weight: 700; color: var(--teal-deep); margin-bottom: 8px; letter-spacing: -0.01em; }
+  .product-card p { font-size: 13px; color: var(--text-mid); line-height: 1.7; margin-bottom: 20px; }
+  .product-link { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal-deep); display: inline-flex; align-items: center; gap: 6px; }
+  .product-link svg { width: 12px; height: 12px; transition: transform 0.2s; }
+  .product-card:hover .product-link svg { transform: translateX(3px); }
+  .purity-tag { display: inline-block; font-size: 10px; font-weight: 700; background: rgba(82,104,83,0.1); color: var(--eucalyptus); padding: 3px 10px; border-radius: 3px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; }
+
+  /* NAD CALLOUT */
+  .nad-callout {
+    background: linear-gradient(135deg, var(--teal-deep) 0%, #1a5065 100%);
+    border-radius: 16px; padding: 48px 40px;
+    display: flex; align-items: center; gap: 40px; flex-wrap: wrap;
+    position: relative; overflow: hidden;
+  }
+  .nad-callout::before {
+    content: '';
+    position: absolute; right: -80px; bottom: -80px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(110,180,204,0.14) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .nad-callout-badge {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--skyre); background: rgba(110,180,204,0.15);
+    border: 1px solid rgba(110,180,204,0.25); padding: 6px 16px; border-radius: 100px;
+    margin-bottom: 16px; display: inline-block;
+  }
+  .nad-callout-text { flex: 1; min-width: 260px; position: relative; }
+  .nad-callout-text h3 { font-size: 26px; font-weight: 700; color: #fff; margin-bottom: 14px; letter-spacing: -0.01em; line-height: 1.2; }
+  .nad-callout-text p { font-size: 15px; color: rgba(255,255,255,0.6); line-height: 1.8; margin-bottom: 12px; }
+  .nad-callout-pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(110,180,204,0.15); border: 1px solid rgba(110,180,204,0.25);
+    border-radius: 100px; padding: 8px 18px;
+    font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.75); letter-spacing: 0.06em;
+    margin-top: 8px;
+  }
+  .nad-callout-pill a { color: var(--skyre); font-weight: 700; text-decoration: none; }
+  .nad-callout-pill a:hover { text-decoration: underline; }
+
+  /* STACKS */
+  .stacks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .stack-card {
+    background: var(--white); border: 1px solid var(--border); border-radius: 10px;
+    padding: 28px 24px; text-decoration: none; display: block; transition: all 0.22s;
+  }
+  .stack-card:hover { border-color: var(--skyre-light); box-shadow: 0 4px 24px rgba(28,72,85,0.08); transform: translateY(-2px); }
+  .stack-name { font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--skyre); margin-bottom: 10px; }
+  .stack-card h4 { font-size: 17px; font-weight: 700; color: var(--teal-deep); margin-bottom: 8px; }
+  .stack-card p { font-size: 13px; color: var(--text-mid); line-height: 1.7; margin-bottom: 18px; }
+  .stack-compounds { display: flex; flex-wrap: wrap; gap: 6px; }
+  .compound-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; padding: 4px 10px; border-radius: 3px; background: var(--skyre-pale); color: var(--teal-deep); text-transform: uppercase; }
+
+  /* FDA SECTION */
+  .fda-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  @media (max-width: 700px) { .fda-two-col { grid-template-columns: 1fr; } }
+  .fda-content p { font-size: 15px; color: var(--text-mid); line-height: 1.8; margin-bottom: 18px; }
+  .fda-approved-list { display: flex; flex-direction: column; gap: 12px; margin: 24px 0; }
+  .fda-approved-item {
+    background: var(--skyre-pale); border: 1px solid var(--skyre-light);
+    border-radius: 8px; padding: 16px 20px;
+    display: flex; align-items: flex-start; gap: 14px;
+  }
+  .fda-approved-item .dot { width: 8px; height: 8px; min-width: 8px; background: var(--skyre); border-radius: 50%; margin-top: 7px; }
+  .fda-approved-item div h5 { font-size: 13px; font-weight: 700; color: var(--teal-deep); margin-bottom: 3px; }
+  .fda-approved-item div p { font-size: 13px; color: var(--text-mid); margin: 0; }
+  .fda-quote-panel {
+    background: var(--teal-deep);
+    background-image: linear-gradient(135deg, #162f38 0%, var(--teal-deep) 100%);
+    border-radius: 16px; padding: 40px 36px; position: relative; overflow: hidden;
+  }
+  .fda-quote-panel::before {
+    content: '';
+    position: absolute; top: -40px; right: -40px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(110,180,204,0.14) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .quote-mark { font-size: 64px; line-height: 1; color: var(--skyre); opacity: 0.3; font-family: Georgia, serif; margin-bottom: 8px; }
+  .fda-quote-panel blockquote { font-size: 17px; color: #fff; line-height: 1.7; font-weight: 300; margin-bottom: 24px; font-style: italic; position: relative; }
+  .fda-quote-attr { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
+  .fda-future-note {
+    margin-top: 24px; padding: 18px 20px;
+    background: rgba(110,180,204,0.12);
+    border: 1px solid rgba(110,180,204,0.22);
+    border-radius: 8px; position: relative;
+  }
+  .fda-future-note p { font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.7; margin: 0; }
+  .fda-future-note strong { color: var(--skyre); }
+
+  /* WHY PURETIDE */
+  .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .trust-card {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 8px; padding: 30px 24px; transition: background 0.2s;
+  }
+  .trust-card:hover { background: rgba(255,255,255,0.09); }
+  .trust-icon { width: 40px; height: 40px; background: rgba(110,180,204,0.14); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 18px; }
+  .trust-card h4 { font-size: 12px; font-weight: 700; color: #fff; margin-bottom: 8px; letter-spacing: 0.1em; text-transform: uppercase; }
+  .trust-card p { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.7; }
+
+  /* COA EXPANDED */
+  .coa-explainer {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px; padding: 32px 36px; margin-top: 48px;
+  }
+  .coa-explainer h4 { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 10px; letter-spacing: 0.04em; }
+  .coa-explainer p { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.75; }
+  .coa-explainer a { color: var(--skyre); font-weight: 700; text-decoration: none; }
+  .coa-explainer a:hover { text-decoration: underline; }
+
+  .dark-cta-row {
+    margin-top: 52px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+  }
+  .dark-cta-row p { font-size: 15px; color: rgba(255,255,255,0.55); max-width: 460px; line-height: 1.7; }
+
+  /* FAQ */
+  .faq-list { display: flex; flex-direction: column; gap: 6px; }
+  .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+  .faq-question {
+    width: 100%; background: none; border: none; padding: 22px 26px;
+    text-align: left; font-size: 15px; font-weight: 600; color: var(--teal-deep);
+    cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+    gap: 16px; transition: background 0.15s; font-family: inherit; letter-spacing: 0.01em;
+  }
+  .faq-question:hover { background: var(--skyre-pale); }
+  .faq-question.open { background: var(--skyre-pale); }
+  .faq-chevron { width: 18px; height: 18px; flex-shrink: 0; color: var(--skyre); transition: transform 0.25s; }
+  .faq-question.open .faq-chevron { transform: rotate(180deg); }
+  .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.32s ease; }
+  .faq-answer.open { max-height: 700px; }
+  .faq-answer-inner { padding: 18px 26px 22px; font-size: 15px; color: var(--text-mid); line-height: 1.8; border-top: 1px solid var(--border); }
+  .faq-answer-inner p { margin-bottom: 10px; }
+  .faq-answer-inner p:last-child { margin-bottom: 0; }
+  .faq-shop-link { color: var(--teal-deep); font-weight: 700; font-size: 12px; letter-spacing: 0.1em; text-decoration: none; text-transform: uppercase; }
+  .faq-shop-link:hover { text-decoration: underline; }
+
+  /* SIDE EFFECTS BANNER */
+  .side-effects-banner {
+    background: rgba(210,191,160,0.1); border: 1px solid rgba(210,191,160,0.4);
+    border-radius: 8px; padding: 20px 24px; margin-bottom: 24px;
+  }
+  .side-effects-banner h5 { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal-deep); margin-bottom: 10px; }
+  .se-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .se-tag { font-size: 11px; font-weight: 600; padding: 5px 12px; border-radius: 4px; background: rgba(210,191,160,0.2); border: 1px solid rgba(210,191,160,0.4); color: var(--text-mid); letter-spacing: 0.04em; }
+
+  /* DISCLAIMER */
+  .disclaimer-section { background: var(--white); padding: 64px 48px; }
+  .disclaimer-inner {
+    max-width: 900px; margin: 0 auto;
+    background: #ffffff;
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    padding: 48px 52px;
+    box-shadow: 0 4px 32px rgba(28,72,85,0.06);
+  }
+  .disclaimer-header { display: flex; align-items: flex-start; gap: 18px; margin-bottom: 28px; }
+  .disclaimer-header-icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+  .disclaimer-header h4 {
+    font-size: 14px; font-weight: 800; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--teal-deep);
+  }
+  .disclaimer-body p {
+    font-size: 15px; color: var(--text-mid); line-height: 1.85;
+    margin-bottom: 16px;
+  }
+  .disclaimer-body p:last-child { margin-bottom: 0; }
+
+  /* CTA BANNER */
+  .cta-banner {
+    background: linear-gradient(150deg, #121f24 0%, var(--teal-deep) 50%, #22637a 100%);
+    padding: 80px 48px; text-align: center; position: relative; overflow: hidden;
+  }
+  .cta-banner::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 80% at 50% 110%, rgba(110,180,204,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .cta-banner h2 { font-size: 34px; font-weight: 700; color: #fff; margin-bottom: 12px; letter-spacing: -0.02em; position: relative; }
+  .cta-banner p { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.55); margin-bottom: 36px; letter-spacing: 0.02em; position: relative; }
+  .cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; }
+  .btn-white { display: inline-block; background: #fff; color: var(--teal-deep); font-size: 11px; font-weight: 700; letter-spacing: 0.16em; padding: 14px 36px; border-radius: 4px; text-decoration: none; text-transform: uppercase; transition: all 0.2s; }
+  .btn-white:hover { background: var(--skyre-light); transform: translateY(-1px); }
+
+  /* FOOTER */
+  footer { background: #0e191d; padding: 36px 48px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+  footer svg { height: 22px; width: auto; opacity: 0.4; }
+  .footer-copy { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.25); }
+  .footer-links { display: flex; gap: 28px; list-style: none; }
+  .footer-links a { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.25); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: rgba(255,255,255,0.5); }
+
+  @media (max-width: 640px) {
+    nav, .section, .hero, .cta-banner { padding-left: 24px; padding-right: 24px; }
+    footer { padding: 24px; flex-direction: column; align-items: flex-start; }
+    .dark-cta-row { flex-direction: column; }
+    .disclaimer-inner { padding: 28px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo" aria-label="Pure Tide">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 943.96 425.38" aria-hidden="true">
+      <style>.pt-fill{fill:#1C4855}</style>
+      <g><path class="pt-fill" d="M151.95,425.02h-4.2l-1.97-5.35h-10.16l-1.94,5.35h-4.23l8.68-22.71h5.13l8.68,22.71ZM144.63,416.52l-3.95-10.66-3.91,10.66h7.86Z"/><path class="pt-fill" d="M161.52,425.02v-22.75h8.11c6.75,0,11.59,3.98,11.59,11.38s-4.84,11.37-11.59,11.37h-8.11ZM165.53,421.54h3.91c4.38,0,7.72-2.33,7.72-7.89s-3.34-7.89-7.72-7.89h-3.91v15.79Z"/><path class="pt-fill" d="M188.4,402.27h4.38l7.07,16.36,7.03-16.36h4.38l-10.41,22.75h-2.05l-10.41-22.75Z"/><path class="pt-fill" d="M238.8,425.02h-4.2l-1.97-5.35h-10.16l-1.94,5.35h-4.23l8.68-22.71h5.13l8.68,22.71ZM231.48,416.52l-3.95-10.66-3.91,10.66h7.86Z"/><path class="pt-fill" d="M248.41,402.27h4.06l12.95,16.44v-16.44h4.02v22.75h-4.02l-12.99-16.51v16.51h-4.02v-22.75Z"/><path class="pt-fill" d="M299.8,408.63c-1.08-1.65-3.73-3.12-7.43-3.12-4.7,0-7.89,3.34-7.89,8s3.27,8.29,8.04,8.29c3.41,0,5.96-1.29,7.28-2.98v4.63c-1.87,1.26-4.38,1.94-7.14,1.94-7.39,0-12.2-4.77-12.2-11.52s4.67-11.91,12.31-11.91c2.66,0,5.17.68,7.03,1.97v4.7Z"/><path class="pt-fill" d="M311.22,425.02v-22.75h16.36v3.48h-12.34v5.52h11.84v3.16h-11.84v7.11h12.17v3.48h-16.18Z"/><path class="pt-fill" d="M338.47,425.02v-22.75h8.11c6.75,0,11.59,3.98,11.59,11.38s-4.84,11.37-11.59,11.37h-8.11ZM342.49,421.54h3.91c4.38,0,7.72-2.33,7.72-7.89s-3.34-7.89-7.72-7.89h-3.91v15.79Z"/><path class="pt-fill" d="M384.31,425.02v-22.75h8.36c4.63,0,8.47,1.65,8.47,6.75s-3.77,7.03-8.36,7.03h-4.45v8.97h-4.02ZM388.32,412.75h4.2c2.62,0,4.56-.79,4.56-3.63,0-2.98-2.15-3.37-4.56-3.37h-4.2v7Z"/><path class="pt-fill" d="M411.39,425.02v-22.75h16.36v3.48h-12.34v5.52h11.84v3.16h-11.84v7.11h12.17v3.48h-16.18Z"/><path class="pt-fill" d="M438.68,425.02v-22.75h8.36c4.63,0,8.47,1.65,8.47,6.75s-3.77,7.03-8.36,7.03h-4.45v8.97h-4.02ZM442.7,412.75h4.2c2.62,0,4.56-.79,4.56-3.63,0-2.98-2.15-3.37-4.56-3.37h-4.2v7Z"/><path class="pt-fill" d="M472.37,425.02v-19.23h-7.86v-3.48h19.7v3.48h-7.86v19.23h-3.98Z"/><path class="pt-fill" d="M494.24,425.02v-22.75h4.02v22.75h-4.02Z"/><path class="pt-fill" d="M510.46,425.02v-22.75h8.11c6.75,0,11.59,3.98,11.59,11.38s-4.84,11.37-11.59,11.37h-8.11ZM514.48,421.54h3.91c4.38,0,7.72-2.33,7.72-7.89s-3.34-7.89-7.72-7.89h-3.91v15.79Z"/><path class="pt-fill" d="M541.15,425.02v-22.75h16.36v3.48h-12.34v5.52h11.84v3.16h-11.84v7.11h12.17v3.48h-16.18Z"/><path class="pt-fill" d="M601.56,406.65l-8.36,18.37h-2.05l-10.41-22.75h4.38l7.03,16.36,7.39-16.36h3.98l7.43,16.36,7-16.36h4.41l-10.41,22.75h-2.05l-8.36-18.37Z"/><path class="pt-fill" d="M632.03,425.02v-22.75h16.36v3.48h-12.34v5.52h11.84v3.16h-11.84v7.11h12.17v3.48h-16.18Z"/><path class="pt-fill" d="M659.32,425.02v-22.71h4.02v19.23h11.95v3.48h-15.97Z"/><path class="pt-fill" d="M685.12,425.02v-22.71h4.02v19.23h11.95v3.48h-15.97Z"/><path class="pt-fill" d="M710.91,402.27h4.06l12.95,16.44v-16.44h4.02v22.75h-4.02l-12.99-16.51v16.51h-4.02v-22.75Z"/><path class="pt-fill" d="M744.22,425.02v-22.75h16.36v3.48h-12.34v5.52h11.84v3.16h-11.84v7.11h12.17v3.48h-16.18Z"/><path class="pt-fill" d="M779.16,405.43c-1.87,0-4.27.57-4.27,2.66,0,1.9,1.76,2.73,4.23,3.44l1.04.29c3.37.97,7.36,2.15,7.36,6.82,0,4.95-4.7,6.75-9.01,6.75-3.01,0-6.32-.93-8.76-2.8v-3.7c2.4,1.9,6.1,3.05,9.19,3.05,2.22,0,4.38-.61,4.38-3.09,0-2.04-2.37-2.69-5.02-3.44l-1.58-.43c-3.12-.97-6.03-2.69-6.03-6.67,0-4.84,4.41-6.39,8.58-6.39,2.83,0,5.56.97,7.11,1.83v3.88c-1.36-1.04-4.56-2.19-7.21-2.19Z"/><path class="pt-fill" d="M806.14,405.43c-1.87,0-4.27.57-4.27,2.66,0,1.9,1.76,2.73,4.23,3.44l1.04.29c3.37.97,7.36,2.15,7.36,6.82,0,4.95-4.7,6.75-9.01,6.75-3.01,0-6.32-.93-8.76-2.8v-3.7c2.4,1.9,6.1,3.05,9.19,3.05,2.22,0,4.38-.61,4.38-3.09,0-2.04-2.37-2.69-5.02-3.44l-1.58-.43c-3.12-.97-6.03-2.69-6.03-6.67,0-4.84,4.41-6.39,8.58-6.39,2.83,0,5.56.97,7.11,1.83v3.88c-1.36-1.04-4.56-2.19-7.21-2.19Z"/></g>
+      <g><path class="pt-fill" d="M56.99,227.01H0v72.97c6.84-9.74,18.18-16.11,30.97-16.11v-33.27h20.45c16.1.39,24.35,7.04,24.78,19.95-.43,12.67-8.37,19.3-23.89,19.92-.29.02-.58.03-.89.03h-20.45c-15.82,0-28.95,11.83-30.97,27.13v43.01h30.97v-47.17h22.92c2.47,0,4.84-.07,7.14-.2.61-.03,1.23-.07,1.82-.12.44-.03.87-.07,1.3-.1.17-.02.36-.03.53-.05.43-.03.85-.07,1.28-.14.6-.05,1.19-.12,1.77-.2,27.45-3.41,41.01-17.85,40.65-43.31-1.23-27.4-18.37-41.52-51.4-42.32Z"/><path class="pt-fill" d="M207.02,305.08c0,23.04-9.72,34.56-29.18,34.56-20.29-.41-30.63-11.72-31.04-33.94v-78.76h-31.04v78.76c.41,39.19,20.48,58.78,60.21,58.78,41.79,0,62.69-20,62.69-59.99v-77.55h-31.65v78.15Z"/><path class="pt-fill" d="M368.72,266.86c-1.16-23.97-16.21-37.16-45.15-39.57-.63-.05-1.26-.1-1.89-.14-.44-.03-.89-.05-1.35-.08-.19,0-.36-.02-.55-.03l-1.38-.05c-.58-.02-1.16-.03-1.74-.05h-62.6v1.38c4.38,12.92,16.62,22.21,30.98,22.21h26.65c16.94-.41,25,5.65,24.18,18.14.41,11.7-7.66,17.56-24.18,17.56h-26.65v-28.73c-12.54,0-23.73-5.85-30.98-14.96v118.1h30.98v-52.04h17.98l34.09,52.06h39.04l-40.92-53.87c22.73-4.44,33.88-17.74,33.48-39.92Z"/><polygon class="pt-fill" points="534.77 251.74 579.39 251.74 579.39 360.63 610.99 360.63 610.99 251.74 654.99 251.74 654.99 226.93 534.77 226.93 534.77 251.74"/><rect class="pt-fill" x="665.2" y="226.9" width="31.62" height="133.73"/><path class="pt-fill" d="M750.98,226.9h-42.77v118.9c7.25-9.56,18.72-15.74,31.62-15.74v-78.35h10.53c27.68.39,41.95,14.11,42.77,41.15.36,25.84-10.27,40.35-31.88,43.5-1.01.15-2.01.27-3.05.36-.82.08-1.66.15-2.51.19-.39.03-.78.05-1.18.07-1.11.05-2.25.07-3.43.05h-11.25c-14.88,0-27.48,9.98-31.44,23.6h44.44c6.52.2,12.61.02,18.26-.6.63-.05,1.28-.14,1.89-.22.44-.03.89-.1,1.31-.17.19-.02.38-.03.55-.09.44-.05.89-.12,1.33-.2.63-.07,1.25-.19,1.86-.31,33.31-5.96,49.29-28.01,47.94-66.18-.84-43.57-25.82-65.55-75.01-65.96Z"/><polygon class="pt-fill" points="867.64 337.03 867.64 305.56 937.07 305.56 937.07 280.74 867.64 280.74 867.64 251.71 943.96 251.73 943.96 226.91 836.65 226.9 836.65 360.63 943.88 360.63 943.88 337.03 867.64 337.03"/><polygon class="pt-fill" points="415.56 337.03 415.56 305.56 484.98 305.56 484.98 280.74 415.56 280.74 415.56 251.71 491.87 251.73 491.87 226.91 384.56 226.9 384.56 360.63 491.79 360.63 491.79 337.03 415.56 337.03"/></g>
+      <g><path class="pt-fill" d="M574.56,105.57c-22.58,3.11-45.39-.9-65.45-13.41l-29.46-18.37c-18.45-11.52-40.08-12.51-58.6-2.64-22.73,12.11-32.05,23.36-54.71,29.77l-.28-43.66c38.23-26.59,74.18-46.17,121.41-25.17,33.63,14.95,45.66,37.4,86.88,34.65l.2,38.82Z"/><path class="pt-fill" d="M574.4,121.74v40.2c-71.42,7.71-99.9-42.95-171.72-12.9-11.8,4.92-23.01,8.14-36.38,11.56l.08-42.79,31.62-10.89c36.34-12.55,76.58-9.79,112.29,3.66,21.04,7.91,40.94,11.01,64.11,11.17Z"/><circle class="pt-fill" cx="554.64" cy="23.25" r="23.25"/></g>
+    </svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/">Products</a></li>
+    <li><a href="/learn" class="active">Education</a></li>
+    <li><a href="/calculator">Dosage Calculator</a></li>
+    <li><a href="/#contact">Contact</a></li>
+    <li><a href="/shop" class="nav-cta">Shop Now</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-badge-row">
+    <span class="hero-tag">Peptide Education</span>
+    <span class="hero-tag-canada">Tested in Canada by <a href="https://testides.ca" target="_blank" rel="noopener">Testides</a></span>
+  </div>
+  <h1>Everything You Want<br>to Know About Peptides</h1>
+  <p>Plain answers to the questions we get asked most. No jargon, no fluff. Just the science, simplified.</p>
+  <div class="hero-actions">
+    <a href="#faqs" class="btn-primary">Read the FAQs</a>
+    <a href="/shop" class="btn-ghost">Browse Products</a>
+  </div>
+</section>
+
+<!-- wave divider -->
+<div class="wave-divider" style="background:var(--teal-deep);">
+  <svg viewBox="0 0 1440 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,0 C240,48 480,0 720,24 C960,48 1200,8 1440,32 L1440,48 L0,48 Z" fill="#EFEFEF"/>
+  </svg>
+</div>
+
+<!-- WHAT ARE PEPTIDES -->
+<section class="section">
+  <div class="container">
+    <div class="two-col">
+      <div class="peptide-visual">
+        <div class="chain">
+          <span class="amino">Gly</span><span class="amino light">Pro</span><span class="amino">Ala</span>
+          <span class="amino lighter">Val</span><span class="amino light">Leu</span><span class="amino">Ser</span>
+          <span class="amino lighter">Thr</span><span class="amino light">Cys</span><span class="amino">Ile</span>
+          <span class="amino lighter">Met</span>
+        </div>
+        <div class="chain-label">Amino acid chain &rarr; Peptide</div>
+      </div>
+      <div class="content-text">
+        <div class="section-eyebrow"><span class="section-tag">The Basics</span><span class="tag-line"></span></div>
+        <h3>What are peptides?</h3>
+        <p>Peptides are short chains of amino acids, the same fundamental building blocks that make up every protein in your body. While a protein might contain hundreds of amino acids in a complex folded structure, a peptide is a much shorter, more targeted sequence, typically between 2 and 50 amino acids long.</p>
+        <p>Think of amino acids as individual letters. Proteins are long novels. Peptides are precise sentences: specific, intentional, and built to communicate one clear message to your body.</p>
+        <div class="fact-chips">
+          <span class="fact-chip">Naturally occurring in the body</span>
+          <span class="fact-chip">Smaller than proteins</span>
+          <span class="fact-chip">Highly targeted action</span>
+          <span class="fact-chip">Studied globally</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW PEPTIDES WORK -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-eyebrow"><span class="section-tag">The Science</span><span class="tag-line"></span></div>
+    <h2 class="section-title">How do peptides work?</h2>
+    <p class="section-subtitle">Peptides work by binding to specific receptors on the surface of cells, triggering a targeted biological response. Each peptide has a unique sequence that determines which receptors it interacts with, and therefore what it does.</p>
+    <div class="steps">
+      <div class="step-card">
+        <div class="step-number">01</div>
+        <h4>Receptor Binding</h4>
+        <p>A peptide enters the body and seeks out its specific receptor, like a key searching for its lock. The shape of the amino acid sequence determines exactly which receptor it fits.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">02</div>
+        <h4>Cell Signalling</h4>
+        <p>Once bound, the peptide sends a signal into the cell, triggering a specific biological process: the release of a hormone, activation of a repair pathway, or a metabolic response.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">03</div>
+        <h4>Targeted Response</h4>
+        <p>Unlike broader compounds, peptides work with precision. They activate specific pathways rather than flooding the entire system, which is why researchers study them across such a wide range of applications.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">04</div>
+        <h4>Natural Amplification</h4>
+        <p>Many peptides work by amplifying processes the body already performs naturally, supporting what is already there rather than introducing entirely foreign mechanisms.</p>
+      </div>
+    </div>
+    <div class="product-cta-strip">
+      <div class="product-cta-strip-text">
+        <h4>Ready to explore the science yourself?</h4>
+        <p>Research-grade. Canadian-made. COA on every batch.</p>
+      </div>
+      <a href="/shop" class="btn-skyre">Browse All Products &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- LYOPHILIZATION -->
+<section class="section section-dotted">
+  <div class="container">
+    <div class="section-eyebrow"><span class="section-tag">How It Works</span><span class="tag-line"></span></div>
+    <h2 class="section-title">Lyophilization: From Powder to Liquid</h2>
+    <p class="section-subtitle">All Pure Tide peptides arrive as a fine lyophilized (freeze-dried) powder. Here is why that matters, and exactly how to prepare them for use in research.</p>
+    <div class="lyoph-grid">
+      <div class="lyoph-visual">
+        <div class="lyoph-steps">
+          <div class="lyoph-step">
+            <div class="lyoph-num">1</div>
+            <div class="lyoph-step-text">
+              <h5>The Peptide is Lyophilized</h5>
+              <p>Water is removed from the compound under controlled freeze-drying conditions. This preserves the peptide structure and extends shelf life significantly.</p>
+            </div>
+          </div>
+          <div class="lyoph-step">
+            <div class="lyoph-num">2</div>
+            <div class="lyoph-step-text">
+              <h5>You Add Bacteriostatic Water</h5>
+              <p>BAC water is injected slowly into the vial to reconstitute the peptide. Always add liquid to the side of the vial wall, never directly onto the powder.</p>
+            </div>
+          </div>
+          <div class="lyoph-step">
+            <div class="lyoph-num">3</div>
+            <div class="lyoph-step-text">
+              <h5>Gently Swirl to Dissolve</h5>
+              <p>Do not shake. Swirl gently until the powder is fully dissolved. The solution should be clear. Refrigerate after reconstitution.</p>
+            </div>
+          </div>
+          <div class="lyoph-step">
+            <div class="lyoph-num">4</div>
+            <div class="lyoph-step-text">
+              <h5>Ready for Research Use</h5>
+              <p>The reconstituted solution is now ready. Most peptides remain stable for 4 to 6 weeks when refrigerated.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lyoph-content">
+        <h3>Why are peptides freeze-dried?</h3>
+        <p>Lyophilization removes moisture entirely, which is the primary cause of peptide degradation. In powder form, peptides can be stored at room temperature for extended periods without losing potency. Once reconstituted, they are at their most bioavailable and ready for research application.</p>
+        <p>This process is the gold standard in pharmaceutical manufacturing precisely because it preserves purity without additives or preservatives.</p>
+        <div class="bac-box">
+          <h5>What is Bacteriostatic Water (BAC)?</h5>
+          <ul>
+            <li>Sterile water for injection</li>
+            <li>Contains 0.9% benzyl alcohol as a preservative</li>
+            <li>Prevents bacterial growth in multi-use vials</li>
+            <li>Maintains the peptide solution for weeks when refrigerated</li>
+            <li>Available at most compounding pharmacies and online medical suppliers</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RETA VS OZEMPIC -->
+<section class="section">
+  <div class="container">
+    <div class="section-eyebrow"><span class="section-tag">Metabolic Research</span><span class="tag-line"></span></div>
+    <h2 class="section-title">Retatrutide vs. Ozempic vs. Mounjaro</h2>
+    <p class="section-subtitle">One of the most searched topics in the peptide space right now. Here is how the three compounds compare at the receptor level, and why Retatrutide represents the next generation of metabolic research.</p>
+    <div class="compare-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Ozempic<br><span style="font-weight:400;font-size:11px;opacity:0.65">Semaglutide</span></th>
+            <th>Mounjaro<br><span style="font-weight:400;font-size:11px;opacity:0.65">Tirzepatide</span></th>
+            <th class="highlight-col">Retatrutide<br><span style="font-weight:400;font-size:11px;opacity:0.8">LY3437943</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Receptor Targets</td><td>GLP-1 only</td><td>GLP-1 + GIP</td><td class="highlight-col">GLP-1 + GIP + Glucagon</td></tr>
+          <tr><td>Mechanism Type</td><td>Single agonist</td><td>Dual agonist</td><td class="highlight-col">Triple agonist</td></tr>
+          <tr><td>Appetite Signalling</td><td><span class="badge badge-teal">Yes</span></td><td><span class="badge badge-teal">Yes</span></td><td class="highlight-col"><span class="badge badge-teal">Yes</span></td></tr>
+          <tr><td>Glucose Balance</td><td><span class="badge badge-teal">Yes</span></td><td><span class="badge badge-teal">Yes</span></td><td class="highlight-col"><span class="badge badge-teal">Yes</span></td></tr>
+          <tr><td>Energy Expenditure</td><td><span class="badge badge-grey">No</span></td><td><span class="badge badge-grey">Minimal</span></td><td class="highlight-col"><span class="badge badge-green">Yes, via glucagon</span></td></tr>
+          <tr><td>Avg. Weight Reduction<br><span style="font-size:12px;font-weight:400;">(phase 2 / trial data)</span></td><td>~15%</td><td>~21%</td><td class="highlight-col">~24%</td></tr>
+          <tr><td>Regulatory Status</td><td><span class="badge badge-teal">FDA Approved</span></td><td><span class="badge badge-teal">FDA Approved</span></td><td class="highlight-col"><span class="badge badge-grey">Under Research</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="compare-note">
+      <strong>What makes Retatrutide different:</strong> The addition of glucagon receptor activation is the key distinction. Glucagon signals the body to increase energy expenditure, meaning the body burns more energy at rest. Neither Ozempic nor Mounjaro include this mechanism. All data above is sourced from published preclinical and Phase 2 trial research. Retatrutide is not approved for human use and is available from Pure Tide for research purposes only.
+    </div>
+    <div class="reta-cta">
+      <div class="reta-cta-icon">&#9879;&#65039;</div>
+      <div class="reta-cta-body">
+        <div class="overline">Now Available</div>
+        <h4>Retatrutide (LY3437943)</h4>
+        <p>Research-grade. Third-party tested by Testides. COA included. &gt;99% purity.</p>
+      </div>
+      <a href="/products/retatrutide" class="btn-teal">Shop Retatrutide &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS GRID -->
+<section class="section section-sage">
+  <div class="container">
+    <div class="section-eyebrow"><span class="section-tag">Our Catalogue</span><span class="tag-line"></span></div>
+    <h2 class="section-title">Most researched compounds</h2>
+    <p class="section-subtitle">Each batch comes with a Certificate of Analysis, ships from Canada, and is independently third-party tested at <a href="https://testides.ca" target="_blank" rel="noopener" style="color:var(--teal-deep);font-weight:600;">Testides</a> to a standard of &gt;99% purity.</p>
+    <div class="products-grid">
+
+      <a href="/products/retatrutide" class="product-card">
+        <div class="product-tag">Metabolic</div>
+        <div class="purity-tag">&gt;99% Purity</div>
+        <h4>Retatrutide</h4>
+        <p>The next generation triple-agonist metabolic peptide. Targets GLP-1, GIP, and glucagon receptors simultaneously for maximum metabolic research application.</p>
+        <div class="product-link">View Product <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </a>
+
+      <a href="/products/ghk-cu" class="product-card">
+        <div class="product-tag">Skin &amp; Repair</div>
+        <div class="purity-tag">&gt;99% Purity</div>
+        <h4>GHK-Cu</h4>
+        <p>A naturally occurring copper peptide with a well-documented research profile in skin regeneration, collagen synthesis, and wound healing at the cellular level.</p>
+        <div class="product-link">View Product <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </a>
+
+      <a href="/products/bpc-157" class="product-card">
+        <div class="product-tag">Recovery</div>
+        <div class="purity-tag">&gt;99% Purity</div>
+        <h4>BPC-157</h4>
+        <p>One of the most extensively studied regenerative peptides. Widely researched for tissue recovery, joint health, and cellular regeneration pathways.</p>
+        <div class="product-link">View Product <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </a>
+
+      <a href="/products/tb-500" class="product-card">
+        <div class="product-tag">Repair</div>
+        <div class="purity-tag">&gt;99% Purity</div>
+        <h4>TB-500</h4>
+        <p>Thymosin Beta-4 analogue frequently stacked with BPC-157. Studied for accelerated tissue repair and inflammation pathway modulation.</p>
+        <div class="product-link">View Product <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </a>
+
+      <a href="/products/mots-c" class="product-card">
+        <div class="product-tag">Longevity</div>
+        <div class="purity-tag">&gt;99% Purity</div>
+        <h4>Mots-C</h4>
+        <p>A mitochondria-derived peptide with an emerging research profile in metabolic regulation, cellular energy, and age-related decline. One of the more novel compounds in the longevity space.</p>
+        <div class="product-link">View Product <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </a>
+
+      <a href="/products/tesamorelin" class="product-card">
+        <div class="product-tag">Growth Hormone</div>
+        <div class="purity-tag">&gt;99% Purity</div>
+        <h4>Tesamorelin</h4>
+        <p>A growth hormone-releasing factor analogue. One of the few peptides with an existing FDA approval (for HIV-associated lipodystrophy), making it one of the most clinically validated in the space.</p>
+        <div class="product-link">View Product <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- DID YOU KNOW: NAD -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="nad-callout">
+      <div class="nad-callout-text">
+        <div class="nad-callout-badge">Did You Know</div>
+        <h3>NAD+ is not actually a peptide.</h3>
+        <p>A lot of people come to us asking about NAD+ in the same breath as peptides. Understandable, given that we carry it and it is very often researched alongside peptide protocols. But technically, NAD+ (Nicotinamide Adenine Dinucleotide) is a coenzyme, not a peptide. It is not made of amino acids. It is a molecule found in every living cell, central to energy metabolism, DNA repair, and sirtuin activation.</p>
+        <p>Why do we carry it? Because the research community uses it extensively alongside peptide stacks, and the wellness goals overlap significantly. It just operates through a completely different mechanism.</p>
+        <div class="nad-callout-pill">Still want to learn more? <a href="#faqs">See the NAD+ FAQ below</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STACKS AND BLENDS -->
+<section class="section section-grid">
+  <div class="container">
+    <div class="section-eyebrow"><span class="section-tag">Curated Stacks</span><span class="tag-line"></span></div>
+    <h2 class="section-title">Why people choose stacks and blends</h2>
+    <p class="section-subtitle">Individual peptides are powerful on their own. But certain combinations have complementary mechanisms that researchers commonly study together. Our curated stacks make it simple.</p>
+    <div class="stacks-grid">
+
+      <a href="/products/wolverine-stack" class="stack-card">
+        <div class="stack-name">Recovery Stack</div>
+        <h4>Wolverine Stack</h4>
+        <p>The most popular recovery combination in our catalogue. BPC-157 and TB-500 target overlapping repair pathways, making them one of the most studied pairings in regenerative peptide research.</p>
+        <div class="stack-compounds"><span class="compound-tag">BPC-157</span><span class="compound-tag">TB-500</span></div>
+      </a>
+
+      <a href="/products/glow-stack" class="stack-card">
+        <div class="stack-name">Skin &amp; Glow Stack</div>
+        <h4>Glow Stack</h4>
+        <p>Built around GHK-Cu and complementary compounds researched for skin structure, collagen synthesis, and visible cellular renewal. Designed for the skin-health research community.</p>
+        <div class="stack-compounds"><span class="compound-tag">GHK-Cu</span><span class="compound-tag">Glow Blend</span></div>
+      </a>
+
+      <a href="/products/klow-stack" class="stack-card">
+        <div class="stack-name">Blend</div>
+        <h4>Klow</h4>
+        <p>A targeted blend formulated for researchers studying a specific area of cellular function and recovery. Combines compounds with a shared focus on precision outcomes.</p>
+        <div class="stack-compounds"><span class="compound-tag">Klow Blend</span></div>
+      </a>
+
+      <a href="/products/cjc-ipa-stack" class="stack-card">
+        <div class="stack-name">GH Peptide Stack</div>
+        <h4>CJC-1295 / Ipamorelin</h4>
+        <p>One of the most studied growth hormone secretagogue combinations. CJC-1295 extends the signal window while Ipamorelin provides a clean, selective pulse. Frequently researched together for synergistic effect.</p>
+        <div class="stack-compounds"><span class="compound-tag">CJC-1295</span><span class="compound-tag">Ipamorelin</span></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY NOT FDA APPROVED -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-eyebrow"><span class="section-tag">The Regulatory Picture</span><span class="tag-line"></span></div>
+    <h2 class="section-title">Why are peptides not FDA approved?</h2>
+    <p class="section-subtitle">This is one of the most common questions we get. The answer has more nuance than most people expect.</p>
+    <div class="fda-two-col">
+      <div class="fda-content">
+        <p>Most research peptides are not FDA approved because they are naturally occurring amino acid sequences. The FDA approval process is designed for novel drug compounds, and because peptides like BPC-157 occur in the body naturally, they occupy a regulatory grey area that falls outside the traditional drug development pathway.</p>
+        <p>Approval is also extraordinarily expensive. Pharmaceutical companies fund clinical trials because they can patent and profit from a drug. Since peptides are not patentable in their natural form, there is very little commercial incentive to run the full approval process, even for compounds with strong research support.</p>
+        <p>That said, some peptides do have FDA approval when they have been developed as specific pharmaceutical formulations:</p>
+        <div class="fda-approved-list">
+          <div class="fda-approved-item">
+            <div class="dot"></div>
+            <div>
+              <h5>Semaglutide (Ozempic, Wegovy)</h5>
+              <p>FDA approved for type 2 diabetes management and weight reduction.</p>
+            </div>
+          </div>
+          <div class="fda-approved-item">
+            <div class="dot"></div>
+            <div>
+              <h5>Tesamorelin (Egrifta)</h5>
+              <p>FDA approved for HIV-associated lipodystrophy. One of the few peptides with full clinical approval and the compound we carry.</p>
+            </div>
+          </div>
+        </div>
+        <p>The regulatory landscape is also shifting. The FDA is actively reviewing a number of peptide compounds as interest in the space grows.</p>
+      </div>
+      <div>
+        <div class="fda-quote-panel">
+          <div class="quote-mark">"</div>
+          <blockquote>That being said, the FDA is currently looking to approve 12 larger peptides this year. The science is catching up to what the research community has known for a long time.</blockquote>
+          <div class="fda-quote-attr">Shared via DM by a member of our research community</div>
+          <div class="fda-future-note">
+            <p><strong>What this means for researchers:</strong> The peptide approval pipeline is active and growing. As more compounds move through Phase 2 and 3 trials, the regulatory picture will continue to evolve. We are watching it closely.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY PURETIDE -->
+<section class="section section-dark">
+  <div class="container">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 943.96 425.38" style="height:28px;width:auto;display:block;margin-bottom:36px;" aria-label="Pure Tide">
+      <style>.pt-white{fill:#ffffff}</style>
+      <g><path class="pt-white" d="M151.95,425.02h-4.2l-1.97-5.35h-10.16l-1.94,5.35h-4.23l8.68-22.71h5.13l8.68,22.71ZM144.63,416.52l-3.95-10.66-3.91,10.66h7.86Z"/><path class="pt-white" d="M161.52,425.02v-22.75h8.11c6.75,0,11.59,3.98,11.59,11.38s-4.84,11.37-11.59,11.37h-8.11ZM165.53,421.54h3.91c4.38,0,7.72-2.33,7.72-7.89s-3.34-7.89-7.72-7.89h-3.91v15.79Z"/><path class="pt-white" d="M188.4,402.27h4.38l7.07,16.36,7.03-16.36h4.38l-10.41,22.75h-2.05l-10.41-22.75Z"/><path class="pt-white" d="M238.8,425.02h-4.2l-1.97-5.35h-10.16l-1.94,5.35h-4.23l8.68-22.71h5.13l8.68,22.71ZM231.48,416.52l-3.95-10.66-3.91,10.66h7.86Z"/><path class="pt-white" d="M299.8,408.63c-1.08-1.65-3.73-3.12-7.43-3.12-4.7,0-7.89,3.34-7.89,8s3.27,8.29,8.04,8.29c3.41,0,5.96-1.29,7.28-2.98v4.63c-1.87,1.26-4.38,1.94-7.14,1.94-7.39,0-12.2-4.77-12.2-11.52s4.67-11.91,12.31-11.91c2.66,0,5.17.68,7.03,1.97v4.7Z"/><path class="pt-white" d="M384.31,425.02v-22.75h8.36c4.63,0,8.47,1.65,8.47,6.75s-3.77,7.03-8.36,7.03h-4.45v8.97h-4.02ZM388.32,412.75h4.2c2.62,0,4.56-.79,4.56-3.63,0-2.98-2.15-3.37-4.56-3.37h-4.2v7Z"/><path class="pt-white" d="M438.68,425.02v-22.75h8.36c4.63,0,8.47,1.65,8.47,6.75s-3.77,7.03-8.36,7.03h-4.45v8.97h-4.02ZM442.7,412.75h4.2c2.62,0,4.56-.79,4.56-3.63,0-2.98-2.15-3.37-4.56-3.37h-4.2v7Z"/><path class="pt-white" d="M750.98,226.9h-42.77v118.9c7.25-9.56,18.72-15.74,31.62-15.74v-78.35h10.53c27.68.39,41.95,14.11,42.77,41.15.36,25.84-10.27,40.35-31.88,43.5-1.01.15-2.01.27-3.05.36-.82.08-1.66.15-2.51.19-.39.03-.78.05-1.18.07-1.11.05-2.25.07-3.43.05h-11.25c-14.88,0-27.48,9.98-31.44,23.6h44.44c6.52.2,12.61.02,18.26-.6.63-.05,1.28-.14,1.89-.22.44-.03.89-.1,1.31-.17.19-.02.38-.03.55-.09.44-.05.89-.12,1.33-.2.63-.07,1.25-.19,1.86-.31,33.31-5.96,49.29-28.01,47.94-66.18-.84-43.57-25.82-65.55-75.01-65.96Z"/></g>
+      <g><path class="pt-white" d="M574.56,105.57c-22.58,3.11-45.39-.9-65.45-13.41l-29.46-18.37c-18.45-11.52-40.08-12.51-58.6-2.64-22.73,12.11-32.05,23.36-54.71,29.77l-.28-43.66c38.23-26.59,74.18-46.17,121.41-25.17,33.63,14.95,45.66,37.4,86.88,34.65l.2,38.82Z"/><path class="pt-white" d="M574.4,121.74v40.2c-71.42,7.71-99.9-42.95-171.72-12.9-11.8,4.92-23.01,8.14-36.38,11.56l.08-42.79,31.62-10.89c36.34-12.55,76.58-9.79,112.29,3.66,21.04,7.91,40.94,11.01,64.11,11.17Z"/><circle class="pt-white" cx="554.64" cy="23.25" r="23.25"/></g>
+    </svg>
+    <h2 class="section-title section-title-light">Our peptides. Your confidence.</h2>
+    <p class="section-subtitle section-subtitle-light">We built Pure Tide to solve one problem: access to research-grade peptides you can actually trust. Here is what sets us apart.</p>
+    <div class="trust-grid">
+      <div class="trust-card">
+        <div class="trust-icon">&#127464;&#127462;</div>
+        <h4>Canadian-Based</h4>
+        <p>We are a Canadian company, operating under Canadian standards. Fast, reliable domestic shipping with no international grey areas.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon">&#128300;</div>
+        <h4>Tested by Testides</h4>
+        <p>Every batch is independently tested by <a href="https://testides.ca" target="_blank" rel="noopener" style="color:var(--skyre);font-weight:700;text-decoration:none;">Testides</a>, a premium third-party Canadian lab. Not self-certified. Not manufacturer-certified. Externally verified.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon">&#128196;</div>
+        <h4>COA on Every Batch</h4>
+        <p>A Certificate of Analysis (COA) is a document issued by an independent laboratory confirming the purity, identity, and potency of a compound. Ours are publicly available on every product page before you buy.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon">&#9879;&#65039;</div>
+        <h4>&gt;99% Purity</h4>
+        <p>Our formulations are tested to a standard of greater than 99% purity on every batch. The benchmark for serious research applications.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon">&#128101;</div>
+        <h4>Thousands of Customers</h4>
+        <p>Our community continues to grow because the product delivers on what it promises: quality and consistency, every single order.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon">&#128230;</div>
+        <h4>Discreet and Private</h4>
+        <p>Anonymous transactions. No tracking. Your privacy matters to us, from checkout through delivery.</p>
+      </div>
+    </div>
+
+    <div class="coa-explainer">
+      <h4>What is a Certificate of Analysis (COA)?</h4>
+      <p>A Certificate of Analysis is an official document issued by an independent, accredited laboratory confirming what is in a compound and at what concentration. It verifies the identity of the peptide, its purity level, and that no contaminants are present. Every Pure Tide product page links to the COA for that batch so you can review the results before purchasing. All testing is conducted by <a href="https://testides.ca" target="_blank" rel="noopener">Testides</a>, a Canadian lab operating to premium analytical standards.</p>
+    </div>
+
+    <div class="dark-cta-row">
+      <p>Every batch is independently verified. Every order ships from Canada. Zero compromise on purity.</p>
+      <a href="/shop" class="btn-skyre">View Full Catalogue &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-alt" id="faqs">
+  <div class="container">
+    <div class="section-eyebrow"><span class="section-tag">Frequently Asked</span><span class="tag-line"></span></div>
+    <h2 class="section-title">Common questions</h2>
+    <p class="section-subtitle">Everything you might be wondering about peptides, our products, and how to get started.</p>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggle(this)">Are peptides the same as steroids?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>No. Peptides and steroids are fundamentally different compounds. Steroids are lipid-based molecules that enter the cell nucleus and alter gene expression broadly. Peptides are amino acid chains that bind to surface receptors and trigger specific, targeted signals. Their mechanisms, structures, and research profiles are entirely distinct.</p></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggle(this)">How are research peptides typically administered?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Administration methods vary by compound and research application. In laboratory research settings, peptides are commonly reconstituted with bacteriostatic water and administered via subcutaneous or intramuscular injection. Some peptides are studied in nasal spray form (such as Semax and Selank). Oral administration is generally less studied for most peptides due to degradation in the digestive tract.</p><p>Pure Tide products are sold as lyophilized (freeze-dried) powder for research purposes only. See the Lyophilization section above for full preparation guidance.</p></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggle(this)">What does "third-party tested" actually mean?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Third-party testing means an independent laboratory (not the manufacturer or the seller) has analysed the compound to verify its identity, purity, and stability. This is the gold standard because it removes the conflict of interest from the quality verification process.</p><p>At Pure Tide, every batch is tested by <a href="https://testides.ca" target="_blank" rel="noopener" style="color:var(--teal-deep);font-weight:700;">Testides</a>, an independent Canadian lab. The Certificate of Analysis (COA) is available directly on each product page so you can verify results before purchasing.</p></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggle(this)">Are peptides legal in Canada?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Research peptides occupy a regulatory space in Canada that varies by compound. Many peptides are not scheduled substances and are legally purchasable for research purposes. They are not approved by Health Canada as drugs, and Pure Tide sells all products explicitly for research use only, not for human or animal consumption.</p><p>It is your responsibility as a purchaser to understand and comply with the regulations applicable in your jurisdiction.</p></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggle(this)">What is BPC-157 and why is it so popular?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>BPC-157 (Body Protective Compound 157) is a synthetic pentadecapeptide derived from a naturally occurring protein found in gastric juice. It is one of the most extensively studied peptides in the recovery and regenerative research space, with a substantial body of preclinical literature examining its influence on tissue recovery, joint health, and cellular regeneration pathways.</p><p>Its popularity stems from the breadth of its research profile and the fact that it appears to work through multiple mechanisms simultaneously, including growth factor pathways and angiogenesis.</p><p style="margin-top:14px;"><a href="/products/bpc-157" class="faq-shop-link">Shop BPC-157 &rarr;</a></p></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggle(this)">What is Retatrutide and how is it different?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Retatrutide (LY3437943) is a triple-agonist peptide that simultaneously activates three receptors: GLP-1, GIP, and glucagon. This triple-pathway approach is what separates it from both Ozempic (GLP-1 only) and Mounjaro (GLP-1 + GIP). The addition of glucagon receptor activation drives increased energy expenditure, a mechanism the other two do not include.</p><p>Phase 2 clinical trial data shows approximately 24% average weight reduction, the highest of the three. It is currently under continued research and is not approved for human use. Available from Pure Tide for research purposes only at &gt;99% purity.</p><p style="margin-top:14px;"><a href="/products/retatrutide" class="faq-shop-link">Shop Retatrutide &rarr;</a></p></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggle(this)">What is GHK-Cu and what is it researched for?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>GHK-Cu (Copper Peptide) is a naturally occurring tripeptide found in human plasma, saliva, and urine. It is one of the most researched peptides in the skin and wound healing space, with a well-documented profile around collagen and elastin synthesis, antioxidant activity, and dermal repair pathways.</p><p>Beyond skin research, it has been studied for its potential role in nerve regeneration and anti-inflammatory activity. Its naturally occurring status and decades of safety research make it one of the more extensively characterised peptides available.</p><p style="margin-top:14px;"><a href="/products/ghk-cu" class="faq-shop-link">Shop GHK-Cu &rarr;</a></p></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggle(this)">What is TB-500?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>TB-500 is a synthetic analogue of Thymosin Beta-4, a naturally occurring peptide found throughout the body. It is most frequently studied for its role in tissue repair, particularly in muscle, tendon, and ligament recovery. Its research profile includes modulation of actin, a protein central to cell migration and wound healing.</p><p>It is very commonly stacked with BPC-157 (the Wolverine Stack) because the two compounds are believed to work through complementary pathways, one addressing the repair cascade at a local level while the other supports systemic recovery signalling.</p><p style="margin-top:14px;"><a href="/products/tb-500" class="faq-shop-link">Shop TB-500 &rarr;</a></p></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggle(this)">What is Mots-C?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Mots-C is a peptide encoded by mitochondrial DNA, making it one of the more novel and unusual compounds in the peptide space. It is classified as a mitokine: a signalling molecule released by mitochondria in response to stress. Research has focused primarily on its role in metabolic regulation, insulin sensitivity, and energy homeostasis.</p><p>Emerging longevity research has also examined its relationship with age-related metabolic decline, as circulating Mots-C levels appear to decrease with age. It is one of the more recent additions to the Pure Tide catalogue, reflecting the evolving frontier of mitochondrial peptide science.</p><p style="margin-top:14px;"><a href="/products/mots-c" class="faq-shop-link">Shop Mots-C &rarr;</a></p></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggle(this)">What is Tesamorelin?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Tesamorelin is a synthetic analogue of Growth Hormone-Releasing Hormone (GHRH). It stimulates the pituitary gland to produce and release growth hormone in a pulsatile, physiologically natural manner. This is distinct from direct GH administration, which bypasses the body's own regulatory feedback loops.</p><p>It is one of the few peptides with an existing FDA approval: Egrifta, approved for the treatment of excess abdominal fat in adults with HIV-associated lipodystrophy. This makes it one of the most clinically validated compounds in our catalogue.</p><p style="margin-top:14px;"><a href="/products/tesamorelin" class="faq-shop-link">Shop Tesamorelin &rarr;</a></p></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggle(this)">Is NAD+ actually a peptide?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>No, and this surprises a lot of people. NAD+ (Nicotinamide Adenine Dinucleotide) is a coenzyme, not a peptide. It is not made of amino acids. It is a molecule present in every living cell, playing a central role in energy metabolism, DNA repair, and the activation of sirtuins, proteins closely associated with cellular longevity.</p><p>NAD+ levels naturally decline with age, which has driven significant interest from the longevity research community. We carry it because it is frequently researched alongside peptide protocols, and the wellness goals overlap substantially. It simply works through a different mechanism.</p></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggle(this)">How long does shipping take within Canada?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>We ship from within Canada. Most domestic orders arrive within 3 to 7 business days depending on your location. Orders over $400 qualify for free shipping. All transactions are processed discreetly. Packaging is plain with no identifying product information on the outside.</p></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggle(this)">What is the difference between a peptide stack and individual compounds?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>A peptide stack is a pre-combined set of two or more individual compounds. Our stacks (like the Wolverine Stack, the Glow Stack, or CJC-1295 / Ipamorelin) are curated combinations that researchers commonly study together based on complementary mechanisms. Stacks offer a convenient way to research multiple compounds simultaneously, often at a better value than purchasing each separately.</p><p style="margin-top:14px;"><a href="/products/stacks" class="faq-shop-link">View All Stacks &rarr;</a></p></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<section class="disclaimer-section">
+  <div class="disclaimer-inner">
+    <div class="disclaimer-header">
+      <div class="disclaimer-header-icon">&#9888;&#65039;</div>
+      <h4>Important: Research Use Only. Please Read Carefully.</h4>
+    </div>
+
+    <div class="side-effects-banner">
+      <h5>Potential Side Effects to Be Aware Of</h5>
+      <p style="font-size:13px;color:var(--text-mid);margin-bottom:12px;line-height:1.7;">As with any research compound, some individuals may experience reactions. Commonly noted in research literature:</p>
+      <div class="se-tags">
+        <span class="se-tag">Histamine reaction</span>
+        <span class="se-tag">Localised redness</span>
+        <span class="se-tag">Itching at injection site</span>
+        <span class="se-tag">Facial flushing</span>
+        <span class="se-tag">Temporary warmth</span>
+      </div>
+    </div>
+
+    <div class="disclaimer-body">
+      <p>All Pure Tide products are intended for research purposes only and are not approved by Health Canada or the FDA for human or animal consumption. The information on this page is provided for educational purposes only and does not constitute medical advice, diagnosis, or treatment recommendations.</p>
+      <p>We are not doctors, pharmacists, or licensed healthcare providers. Nothing on this website should be interpreted as a suggestion to use these compounds on yourself or others. Always consult a qualified healthcare professional before beginning any new protocol.</p>
+      <p>Do your own research. Be informed. Your health decisions are your own.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <h2>Ready to explore our catalogue?</h2>
+  <p>Every batch includes a Certificate of Analysis. Canadian-based. Third-party tested at Testides.</p>
+  <div class="cta-actions">
+    <a href="/shop" class="btn-white">View All Products</a>
+    <a href="/calculator" class="btn-ghost">Dosage Calculator</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 943.96 425.38" aria-label="Pure Tide">
+    <style>.pt-foot{fill:#ffffff}</style>
+    <g><path class="pt-foot" d="M574.56,105.57c-22.58,3.11-45.39-.9-65.45-13.41l-29.46-18.37c-18.45-11.52-40.08-12.51-58.6-2.64-22.73,12.11-32.05,23.36-54.71,29.77l-.28-43.66c38.23-26.59,74.18-46.17,121.41-25.17,33.63,14.95,45.66,37.4,86.88,34.65l.2,38.82Z"/><path class="pt-foot" d="M574.4,121.74v40.2c-71.42,7.71-99.9-42.95-171.72-12.9-11.8,4.92-23.01,8.14-36.38,11.56l.08-42.79,31.62-10.89c36.34-12.55,76.58-9.79,112.29,3.66,21.04,7.91,40.94,11.01,64.11,11.17Z"/><circle class="pt-foot" cx="554.64" cy="23.25" r="23.25"/></g>
+  </svg>
+  <span class="footer-copy">&copy; 2026 Pure Tide Peptides. All rights reserved.</span>
+  <ul class="footer-links">
+    <li><a href="/privacy">Privacy</a></li>
+    <li><a href="/terms">Terms</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+</footer>
+
+<script>
+function toggle(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = btn.classList.contains('open');
+  document.querySelectorAll('.faq-question.open').forEach(b => {
+    b.classList.remove('open');
+    b.nextElementSibling.classList.remove('open');
+  });
+  if (!isOpen) { btn.classList.add('open'); answer.classList.add('open'); }
+}
+</script>
+</body>
+</html>
