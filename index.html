@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Education | Pure Tide Wellness</title>
+<title>Education | PureTide</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -153,14 +153,14 @@
 
   .container { max-width: 980px; margin: 0 auto; }
   .section-eyebrow { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
-  .section-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.26em; text-transform: uppercase; color: var(--skyre); }
+  .section-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.26em; text-transform: uppercase; color: var(--skyre); }
   .section-tag-light { color: rgba(110,180,204,0.7); }
   .tag-line { flex: 1; height: 1px; background: var(--border); max-width: 48px; }
   .tag-line-light { background: rgba(255,255,255,0.15); }
 
   .section-title {
-    font-size: clamp(26px, 4vw, 42px); font-weight: 700; color: var(--teal-deep);
-    line-height: 1.12; margin-bottom: 16px; letter-spacing: -0.02em;
+    font-size: clamp(32px, 5vw, 52px); font-weight: 700; color: var(--teal-deep);
+    line-height: 1.1; margin-bottom: 16px; letter-spacing: -0.02em;
   }
   .section-title-light { color: #fff; }
   .section-subtitle {
@@ -203,7 +203,9 @@
   .fact-chip::before { content: '+'; font-size: 13px; color: var(--skyre); font-weight: 700; }
 
   /* STEPS */
-  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  @media (max-width: 900px) { .steps { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .steps { grid-template-columns: 1fr; } }
   .step-card {
     background: var(--mineral); border: 1px solid var(--border); border-radius: 10px;
     padding: 32px 24px; position: relative; transition: border-color 0.2s, box-shadow 0.2s;
@@ -380,7 +382,8 @@
   .nad-callout-pill a:hover { text-decoration: underline; }
 
   /* STACKS */
-  .stacks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .stacks-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  @media (max-width: 640px) { .stacks-grid { grid-template-columns: 1fr; } }
   .stack-card {
     background: var(--white); border: 1px solid var(--border); border-radius: 10px;
     padding: 28px 24px; text-decoration: none; display: block; transition: all 0.22s;
@@ -544,7 +547,7 @@
 
 <!-- NAV -->
 <nav>
-  <a href="/" class="nav-logo" aria-label="Pure Tide">
+  <a href="https://puretide.ca/" class="nav-logo" aria-label="PureTide">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 943.96 425.38" aria-hidden="true">
       <style>.pt-fill{fill:#1C4855}</style>
       <g><path class="pt-fill" d="M151.95,425.02h-4.2l-1.97-5.35h-10.16l-1.94,5.35h-4.23l8.68-22.71h5.13l8.68,22.71ZM144.63,416.52l-3.95-10.66-3.91,10.66h7.86Z"/><path class="pt-fill" d="M161.52,425.02v-22.75h8.11c6.75,0,11.59,3.98,11.59,11.38s-4.84,11.37-11.59,11.37h-8.11ZM165.53,421.54h3.91c4.38,0,7.72-2.33,7.72-7.89s-3.34-7.89-7.72-7.89h-3.91v15.79Z"/><path class="pt-fill" d="M188.4,402.27h4.38l7.07,16.36,7.03-16.36h4.38l-10.41,22.75h-2.05l-10.41-22.75Z"/><path class="pt-fill" d="M238.8,425.02h-4.2l-1.97-5.35h-10.16l-1.94,5.35h-4.23l8.68-22.71h5.13l8.68,22.71ZM231.48,416.52l-3.95-10.66-3.91,10.66h7.86Z"/><path class="pt-fill" d="M248.41,402.27h4.06l12.95,16.44v-16.44h4.02v22.75h-4.02l-12.99-16.51v16.51h-4.02v-22.75Z"/><path class="pt-fill" d="M299.8,408.63c-1.08-1.65-3.73-3.12-7.43-3.12-4.7,0-7.89,3.34-7.89,8s3.27,8.29,8.04,8.29c3.41,0,5.96-1.29,7.28-2.98v4.63c-1.87,1.26-4.38,1.94-7.14,1.94-7.39,0-12.2-4.77-12.2-11.52s4.67-11.91,12.31-11.91c2.66,0,5.17.68,7.03,1.97v4.7Z"/><path class="pt-fill" d="M311.22,425.02v-22.75h16.36v3.48h-12.34v5.52h11.84v3.16h-11.84v7.11h12.17v3.48h-16.18Z"/><path class="pt-fill" d="M338.47,425.02v-22.75h8.11c6.75,0,11.59,3.98,11.59,11.38s-4.84,11.37-11.59,11.37h-8.11ZM342.49,421.54h3.91c4.38,0,7.72-2.33,7.72-7.89s-3.34-7.89-7.72-7.89h-3.91v15.79Z"/><path class="pt-fill" d="M384.31,425.02v-22.75h8.36c4.63,0,8.47,1.65,8.47,6.75s-3.77,7.03-8.36,7.03h-4.45v8.97h-4.02ZM388.32,412.75h4.2c2.62,0,4.56-.79,4.56-3.63,0-2.98-2.15-3.37-4.56-3.37h-4.2v7Z"/><path class="pt-fill" d="M411.39,425.02v-22.75h16.36v3.48h-12.34v5.52h11.84v3.16h-11.84v7.11h12.17v3.48h-16.18Z"/><path class="pt-fill" d="M438.68,425.02v-22.75h8.36c4.63,0,8.47,1.65,8.47,6.75s-3.77,7.03-8.36,7.03h-4.45v8.97h-4.02ZM442.7,412.75h4.2c2.62,0,4.56-.79,4.56-3.63,0-2.98-2.15-3.37-4.56-3.37h-4.2v7Z"/><path class="pt-fill" d="M472.37,425.02v-19.23h-7.86v-3.48h19.7v3.48h-7.86v19.23h-3.98Z"/><path class="pt-fill" d="M494.24,425.02v-22.75h4.02v22.75h-4.02Z"/><path class="pt-fill" d="M510.46,425.02v-22.75h8.11c6.75,0,11.59,3.98,11.59,11.38s-4.84,11.37-11.59,11.37h-8.11ZM514.48,421.54h3.91c4.38,0,7.72-2.33,7.72-7.89s-3.34-7.89-7.72-7.89h-3.91v15.79Z"/><path class="pt-fill" d="M541.15,425.02v-22.75h16.36v3.48h-12.34v5.52h11.84v3.16h-11.84v7.11h12.17v3.48h-16.18Z"/><path class="pt-fill" d="M601.56,406.65l-8.36,18.37h-2.05l-10.41-22.75h4.38l7.03,16.36,7.39-16.36h3.98l7.43,16.36,7-16.36h4.41l-10.41,22.75h-2.05l-8.36-18.37Z"/><path class="pt-fill" d="M632.03,425.02v-22.75h16.36v3.48h-12.34v5.52h11.84v3.16h-11.84v7.11h12.17v3.48h-16.18Z"/><path class="pt-fill" d="M659.32,425.02v-22.71h4.02v19.23h11.95v3.48h-15.97Z"/><path class="pt-fill" d="M685.12,425.02v-22.71h4.02v19.23h11.95v3.48h-15.97Z"/><path class="pt-fill" d="M710.91,402.27h4.06l12.95,16.44v-16.44h4.02v22.75h-4.02l-12.99-16.51v16.51h-4.02v-22.75Z"/><path class="pt-fill" d="M744.22,425.02v-22.75h16.36v3.48h-12.34v5.52h11.84v3.16h-11.84v7.11h12.17v3.48h-16.18Z"/><path class="pt-fill" d="M779.16,405.43c-1.87,0-4.27.57-4.27,2.66,0,1.9,1.76,2.73,4.23,3.44l1.04.29c3.37.97,7.36,2.15,7.36,6.82,0,4.95-4.7,6.75-9.01,6.75-3.01,0-6.32-.93-8.76-2.8v-3.7c2.4,1.9,6.1,3.05,9.19,3.05,2.22,0,4.38-.61,4.38-3.09,0-2.04-2.37-2.69-5.02-3.44l-1.58-.43c-3.12-.97-6.03-2.69-6.03-6.67,0-4.84,4.41-6.39,8.58-6.39,2.83,0,5.56.97,7.11,1.83v3.88c-1.36-1.04-4.56-2.19-7.21-2.19Z"/><path class="pt-fill" d="M806.14,405.43c-1.87,0-4.27.57-4.27,2.66,0,1.9,1.76,2.73,4.23,3.44l1.04.29c3.37.97,7.36,2.15,7.36,6.82,0,4.95-4.7,6.75-9.01,6.75-3.01,0-6.32-.93-8.76-2.8v-3.7c2.4,1.9,6.1,3.05,9.19,3.05,2.22,0,4.38-.61,4.38-3.09,0-2.04-2.37-2.69-5.02-3.44l-1.58-.43c-3.12-.97-6.03-2.69-6.03-6.67,0-4.84,4.41-6.39,8.58-6.39,2.83,0,5.56.97,7.11,1.83v3.88c-1.36-1.04-4.56-2.19-7.21-2.19Z"/></g>
@@ -553,11 +556,11 @@
     </svg>
   </a>
   <ul class="nav-links">
-    <li><a href="/">Products</a></li>
-    <li><a href="/learn" class="active">Education</a></li>
-    <li><a href="/calculator">Dosage Calculator</a></li>
-    <li><a href="/#contact">Contact</a></li>
-    <li><a href="/shop" class="nav-cta">Shop Now</a></li>
+    <li><a href="https://puretide.ca/products">Products</a></li>
+    <li><a href="https://puretide.ca/learn" class="active">Education</a></li>
+    <li><a href="https://puretide.ca/calculator">Dosage Calculator</a></li>
+    <li><a href="https://puretide.ca/#contact">Contact</a></li>
+    <li><a href="https://puretide.ca/shop" class="nav-cta">Shop Now</a></li>
   </ul>
 </nav>
 
@@ -573,7 +576,7 @@
   <p>Plain answers to the questions we get asked most. No jargon, no fluff. Just the science, simplified.</p>
   <div class="hero-actions">
     <a href="#faqs" class="btn-primary">Read the FAQs</a>
-    <a href="/shop" class="btn-ghost">Browse Products</a>
+    <a href="https://puretide.ca/shop" class="btn-ghost">Browse Products</a>
   </div>
 </section>
 
@@ -644,9 +647,9 @@
     <div class="product-cta-strip">
       <div class="product-cta-strip-text">
         <h4>Ready to explore the science yourself?</h4>
-        <p>Research-grade. Canadian-made. COA on every batch.</p>
+        <p>Research-grade. Third-party tested in Canada by <a href="https://testides.com" target="_blank" rel="noopener" style="color:var(--skyre);font-weight:700;text-decoration:none;">Testides</a>. COA on every batch.</p>
       </div>
-      <a href="/shop" class="btn-skyre">Browse All Products &rarr;</a>
+      <a href="https://puretide.ca/shop" class="btn-skyre">Browse All Products &rarr;</a>
     </div>
   </div>
 </section>
@@ -656,7 +659,7 @@
   <div class="container">
     <div class="section-eyebrow"><span class="section-tag">How It Works</span><span class="tag-line"></span></div>
     <h2 class="section-title">Lyophilization: From Powder to Liquid</h2>
-    <p class="section-subtitle">All Pure Tide peptides arrive as a fine lyophilized (freeze-dried) powder. Here is why that matters, and exactly how to prepare them for use in research.</p>
+    <p class="section-subtitle">All PureTide peptides arrive as a fine lyophilized (freeze-dried) powder. Here is why that matters, and exactly how to prepare them for use in research.</p>
     <div class="lyoph-grid">
       <div class="lyoph-visual">
         <div class="lyoph-steps">
@@ -693,7 +696,7 @@
       <div class="lyoph-content">
         <h3>Why are peptides freeze-dried?</h3>
         <p>Lyophilization removes moisture entirely, which is the primary cause of peptide degradation. In powder form, peptides can be stored at room temperature for extended periods without losing potency. Once reconstituted, they are at their most bioavailable and ready for research application.</p>
-        <p>This process is the gold standard in pharmaceutical manufacturing precisely because it preserves purity without additives or preservatives.</p>
+        <p>This process is the gold standard in pharmaceutical manufacturing precisely because it preserves purity without additives or preservatives. Every PureTide batch is then independently verified by <a href="https://testides.com" target="_blank" rel="noopener" style="color:var(--teal-deep);font-weight:700;text-decoration:none;">Testides</a>, a Canadian third-party lab, to confirm purity before it reaches you.</p>
         <div class="bac-box">
           <h5>What is Bacteriostatic Water (BAC)?</h5>
           <ul>
@@ -737,7 +740,7 @@
       </table>
     </div>
     <div class="compare-note">
-      <strong>What makes Retatrutide different:</strong> The addition of glucagon receptor activation is the key distinction. Glucagon signals the body to increase energy expenditure, meaning the body burns more energy at rest. Neither Ozempic nor Mounjaro include this mechanism. All data above is sourced from published preclinical and Phase 2 trial research. Retatrutide is not approved for human use and is available from Pure Tide for research purposes only.
+      <strong>What makes Retatrutide different:</strong> The addition of glucagon receptor activation is the key distinction. Glucagon signals the body to increase energy expenditure, meaning the body burns more energy at rest. Neither Ozempic nor Mounjaro include this mechanism. All data above is sourced from published preclinical and Phase 2 trial research. Retatrutide is not approved for human use and is available from PureTide for research purposes only. Every batch is third-party tested in Canada by <a href="https://testides.com" target="_blank" rel="noopener" style="color:var(--teal-deep);font-weight:700;">Testides</a> to &gt;99% purity.
     </div>
     <div class="reta-cta">
       <div class="reta-cta-icon">&#9879;&#65039;</div>
@@ -746,7 +749,7 @@
         <h4>Retatrutide (LY3437943)</h4>
         <p>Research-grade. Third-party tested by Testides. COA included. &gt;99% purity.</p>
       </div>
-      <a href="/products/retatrutide" class="btn-teal">Shop Retatrutide &rarr;</a>
+      <a href="https://puretide.ca/products/retatrutide" class="btn-teal">Shop Retatrutide &rarr;</a>
     </div>
   </div>
 </section>
@@ -759,7 +762,7 @@
     <p class="section-subtitle">Each batch comes with a Certificate of Analysis, ships from Canada, and is independently third-party tested at <a href="https://testides.com" target="_blank" rel="noopener" style="color:var(--teal-deep);font-weight:600;">Testides</a> to a standard of &gt;99% purity.</p>
     <div class="products-grid">
 
-      <a href="/products/retatrutide" class="product-card">
+      <a href="https://puretide.ca/products/retatrutide" class="product-card">
         <div class="product-tag">Metabolic</div>
         <div class="purity-tag">&gt;99% Purity</div>
         <h4>Retatrutide</h4>
@@ -767,7 +770,7 @@
         <div class="product-link">View Product <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
 
-      <a href="/products/ghk-cu" class="product-card">
+      <a href="https://puretide.ca/products/ghk-cu" class="product-card">
         <div class="product-tag">Skin &amp; Repair</div>
         <div class="purity-tag">&gt;99% Purity</div>
         <h4>GHK-Cu</h4>
@@ -775,7 +778,7 @@
         <div class="product-link">View Product <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
 
-      <a href="/products/bpc-157" class="product-card">
+      <a href="https://puretide.ca/products/bpc-157" class="product-card">
         <div class="product-tag">Recovery</div>
         <div class="purity-tag">&gt;99% Purity</div>
         <h4>BPC-157</h4>
@@ -783,7 +786,7 @@
         <div class="product-link">View Product <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
 
-      <a href="/products/tb-500" class="product-card">
+      <a href="https://puretide.ca/products/tb-500" class="product-card">
         <div class="product-tag">Repair</div>
         <div class="purity-tag">&gt;99% Purity</div>
         <h4>TB-500</h4>
@@ -791,7 +794,7 @@
         <div class="product-link">View Product <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
 
-      <a href="/products/mots-c" class="product-card">
+      <a href="https://puretide.ca/products/mots-c" class="product-card">
         <div class="product-tag">Longevity</div>
         <div class="purity-tag">&gt;99% Purity</div>
         <h4>Mots-C</h4>
@@ -799,7 +802,7 @@
         <div class="product-link">View Product <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
 
-      <a href="/products/tesamorelin" class="product-card">
+      <a href="https://puretide.ca/products/tesamorelin" class="product-card">
         <div class="product-tag">Growth Hormone</div>
         <div class="purity-tag">&gt;99% Purity</div>
         <h4>Tesamorelin</h4>
@@ -834,28 +837,28 @@
     <p class="section-subtitle">Individual peptides are powerful on their own. But certain combinations have complementary mechanisms that researchers commonly study together. Our curated stacks make it simple.</p>
     <div class="stacks-grid">
 
-      <a href="/products/wolverine-stack" class="stack-card">
+      <a href="https://puretide.ca/products/wolverine-stack" class="stack-card">
         <div class="stack-name">Recovery Stack</div>
         <h4>Wolverine Stack</h4>
         <p>The most popular recovery combination in our catalogue. BPC-157 and TB-500 target overlapping repair pathways, making them one of the most studied pairings in regenerative peptide research.</p>
         <div class="stack-compounds"><span class="compound-tag">BPC-157</span><span class="compound-tag">TB-500</span></div>
       </a>
 
-      <a href="/products/glow-stack" class="stack-card">
+      <a href="https://puretide.ca/products/glow-stack" class="stack-card">
         <div class="stack-name">Skin &amp; Glow Stack</div>
         <h4>Glow Stack</h4>
         <p>Built around GHK-Cu and complementary compounds researched for skin structure, collagen synthesis, and visible cellular renewal. Designed for the skin-health research community.</p>
         <div class="stack-compounds"><span class="compound-tag">GHK-Cu</span><span class="compound-tag">Glow Blend</span></div>
       </a>
 
-      <a href="/products/klow-stack" class="stack-card">
+      <a href="https://puretide.ca/products/klow-stack" class="stack-card">
         <div class="stack-name">Blend</div>
         <h4>Klow</h4>
         <p>A targeted blend formulated for researchers studying a specific area of cellular function and recovery. Combines compounds with a shared focus on precision outcomes.</p>
         <div class="stack-compounds"><span class="compound-tag">Klow Blend</span></div>
       </a>
 
-      <a href="/products/cjc-ipa-stack" class="stack-card">
+      <a href="https://puretide.ca/products/cjc-ipa-stack" class="stack-card">
         <div class="stack-name">GH Peptide Stack</div>
         <h4>CJC-1295 / Ipamorelin</h4>
         <p>One of the most studied growth hormone secretagogue combinations. CJC-1295 extends the signal window while Ipamorelin provides a clean, selective pulse. Frequently researched together for synergistic effect.</p>
@@ -874,9 +877,9 @@
     <p class="section-subtitle">This is one of the most common questions we get. The answer has more nuance than most people expect.</p>
     <div class="fda-two-col">
       <div class="fda-content">
-        <p>Most research peptides are not FDA approved because they are naturally occurring amino acid sequences. The FDA approval process is designed for novel drug compounds, and because peptides like BPC-157 occur in the body naturally, they occupy a regulatory grey area that falls outside the traditional drug development pathway.</p>
-        <p>Approval is also extraordinarily expensive. Pharmaceutical companies fund clinical trials because they can patent and profit from a drug. Since peptides are not patentable in their natural form, there is very little commercial incentive to run the full approval process, even for compounds with strong research support.</p>
-        <p>That said, some peptides do have FDA approval when they have been developed as specific pharmaceutical formulations:</p>
+        <p>In 2013, the Supreme Court ruled that naturally occurring substances cannot be patented. This single ruling is the core reason most peptides will never go through the FDA approval process. Drug companies fund clinical trials because they can patent the outcome and profit from it. Since peptides are naturally occurring amino acid sequences, they cannot be patented. No patent means no return on investment. No return means no funding.</p>
+        <p>Think of it the same way you think about your vitamin D, your omega-3s, or your creatine. None of those are FDA approved either. That does not mean the research does not exist, or that they are unsafe. It means there is no financial pathway that incentivises a company to run a billion-dollar trial process for something they cannot own.</p>
+        <p>That said, some peptides do have FDA approval where a specific pharmaceutical formulation was developed and patented:</p>
         <div class="fda-approved-list">
           <div class="fda-approved-item">
             <div class="dot"></div>
@@ -889,19 +892,19 @@
             <div class="dot"></div>
             <div>
               <h5>Tesamorelin (Egrifta)</h5>
-              <p>FDA approved for HIV-associated lipodystrophy. One of the few peptides with full clinical approval and the compound we carry.</p>
+              <p>FDA approved for HIV-associated lipodystrophy in certain patients. One of the few peptides with full clinical approval, and one of the compounds we carry.</p>
             </div>
           </div>
         </div>
-        <p>The regulatory landscape is also shifting. The FDA is actively reviewing a number of peptide compounds as interest in the space grows.</p>
+        <p>Outside of cases like these, meaningful regulatory change is unlikely unless the financial incentive structure shifts. The research community has been ahead of the regulators for a long time.</p>
       </div>
       <div>
         <div class="fda-quote-panel">
           <div class="quote-mark">"</div>
-          <blockquote>That being said, the FDA is currently looking to approve 12 larger peptides this year. The science is catching up to what the research community has known for a long time.</blockquote>
-          <div class="fda-quote-attr">Shared via DM by a member of our research community</div>
+          <blockquote>Drug companies cannot get a patent on a peptide, just like they cannot get a patent on a supplement. They are not going to pour millions of dollars into studying these things if they cannot make money on the other side. So just because something is not approved does not mean it is not safe or effective. Think of your vitamin D, your omegas, your creatine.</blockquote>
+          <div class="fda-quote-attr">Lisa Levy &nbsp;&middot;&nbsp; Certified Peptide Therapist</div>
           <div class="fda-future-note">
-            <p><strong>What this means for researchers:</strong> The peptide approval pipeline is active and growing. As more compounds move through Phase 2 and 3 trials, the regulatory picture will continue to evolve. We are watching it closely.</p>
+            <p><strong>The bottom line:</strong> The lack of FDA approval is a financial and legal story, not a scientific one. The research on peptides is extensive, global, and growing. We follow it closely so you do not have to.</p>
           </div>
         </div>
       </div>
@@ -912,13 +915,14 @@
 <!-- WHY PURETIDE -->
 <section class="section section-dark">
   <div class="container">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 943.96 425.38" style="height:28px;width:auto;display:block;margin-bottom:36px;" aria-label="Pure Tide">
-      <style>.pt-white{fill:#ffffff}</style>
-      <g><path class="pt-white" d="M151.95,425.02h-4.2l-1.97-5.35h-10.16l-1.94,5.35h-4.23l8.68-22.71h5.13l8.68,22.71ZM144.63,416.52l-3.95-10.66-3.91,10.66h7.86Z"/><path class="pt-white" d="M161.52,425.02v-22.75h8.11c6.75,0,11.59,3.98,11.59,11.38s-4.84,11.37-11.59,11.37h-8.11ZM165.53,421.54h3.91c4.38,0,7.72-2.33,7.72-7.89s-3.34-7.89-7.72-7.89h-3.91v15.79Z"/><path class="pt-white" d="M188.4,402.27h4.38l7.07,16.36,7.03-16.36h4.38l-10.41,22.75h-2.05l-10.41-22.75Z"/><path class="pt-white" d="M238.8,425.02h-4.2l-1.97-5.35h-10.16l-1.94,5.35h-4.23l8.68-22.71h5.13l8.68,22.71ZM231.48,416.52l-3.95-10.66-3.91,10.66h7.86Z"/><path class="pt-white" d="M299.8,408.63c-1.08-1.65-3.73-3.12-7.43-3.12-4.7,0-7.89,3.34-7.89,8s3.27,8.29,8.04,8.29c3.41,0,5.96-1.29,7.28-2.98v4.63c-1.87,1.26-4.38,1.94-7.14,1.94-7.39,0-12.2-4.77-12.2-11.52s4.67-11.91,12.31-11.91c2.66,0,5.17.68,7.03,1.97v4.7Z"/><path class="pt-white" d="M384.31,425.02v-22.75h8.36c4.63,0,8.47,1.65,8.47,6.75s-3.77,7.03-8.36,7.03h-4.45v8.97h-4.02ZM388.32,412.75h4.2c2.62,0,4.56-.79,4.56-3.63,0-2.98-2.15-3.37-4.56-3.37h-4.2v7Z"/><path class="pt-white" d="M438.68,425.02v-22.75h8.36c4.63,0,8.47,1.65,8.47,6.75s-3.77,7.03-8.36,7.03h-4.45v8.97h-4.02ZM442.7,412.75h4.2c2.62,0,4.56-.79,4.56-3.63,0-2.98-2.15-3.37-4.56-3.37h-4.2v7Z"/><path class="pt-white" d="M750.98,226.9h-42.77v118.9c7.25-9.56,18.72-15.74,31.62-15.74v-78.35h10.53c27.68.39,41.95,14.11,42.77,41.15.36,25.84-10.27,40.35-31.88,43.5-1.01.15-2.01.27-3.05.36-.82.08-1.66.15-2.51.19-.39.03-.78.05-1.18.07-1.11.05-2.25.07-3.43.05h-11.25c-14.88,0-27.48,9.98-31.44,23.6h44.44c6.52.2,12.61.02,18.26-.6.63-.05,1.28-.14,1.89-.22.44-.03.89-.1,1.31-.17.19-.02.38-.03.55-.09.44-.05.89-.12,1.33-.2.63-.07,1.25-.19,1.86-.31,33.31-5.96,49.29-28.01,47.94-66.18-.84-43.57-25.82-65.55-75.01-65.96Z"/></g>
-      <g><path class="pt-white" d="M574.56,105.57c-22.58,3.11-45.39-.9-65.45-13.41l-29.46-18.37c-18.45-11.52-40.08-12.51-58.6-2.64-22.73,12.11-32.05,23.36-54.71,29.77l-.28-43.66c38.23-26.59,74.18-46.17,121.41-25.17,33.63,14.95,45.66,37.4,86.88,34.65l.2,38.82Z"/><path class="pt-white" d="M574.4,121.74v40.2c-71.42,7.71-99.9-42.95-171.72-12.9-11.8,4.92-23.01,8.14-36.38,11.56l.08-42.79,31.62-10.89c36.34-12.55,76.58-9.79,112.29,3.66,21.04,7.91,40.94,11.01,64.11,11.17Z"/><circle class="pt-white" cx="554.64" cy="23.25" r="23.25"/></g>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 943.96 425.38" style="height:32px;width:auto;display:block;margin-bottom:36px;" aria-label="PureTide">
+      <style>.pt-wh{fill:#ffffff}</style>
+      <g><path class="pt-wh" d="M151.95,425.02h-4.2l-1.97-5.35h-10.16l-1.94,5.35h-4.23l8.68-22.71h5.13l8.68,22.71ZM144.63,416.52l-3.95-10.66-3.91,10.66h7.86Z"/><path class="pt-wh" d="M161.52,425.02v-22.75h8.11c6.75,0,11.59,3.98,11.59,11.38s-4.84,11.37-11.59,11.37h-8.11ZM165.53,421.54h3.91c4.38,0,7.72-2.33,7.72-7.89s-3.34-7.89-7.72-7.89h-3.91v15.79Z"/><path class="pt-wh" d="M188.4,402.27h4.38l7.07,16.36,7.03-16.36h4.38l-10.41,22.75h-2.05l-10.41-22.75Z"/><path class="pt-wh" d="M238.8,425.02h-4.2l-1.97-5.35h-10.16l-1.94,5.35h-4.23l8.68-22.71h5.13l8.68,22.71ZM231.48,416.52l-3.95-10.66-3.91,10.66h7.86Z"/><path class="pt-wh" d="M248.41,402.27h4.06l12.95,16.44v-16.44h4.02v22.75h-4.02l-12.99-16.51v16.51h-4.02v-22.75Z"/><path class="pt-wh" d="M299.8,408.63c-1.08-1.65-3.73-3.12-7.43-3.12-4.7,0-7.89,3.34-7.89,8s3.27,8.29,8.04,8.29c3.41,0,5.96-1.29,7.28-2.98v4.63c-1.87,1.26-4.38,1.94-7.14,1.94-7.39,0-12.2-4.77-12.2-11.52s4.67-11.91,12.31-11.91c2.66,0,5.17.68,7.03,1.97v4.7Z"/><path class="pt-wh" d="M311.22,425.02v-22.75h16.36v3.48h-12.34v5.52h11.84v3.16h-11.84v7.11h12.17v3.48h-16.18Z"/><path class="pt-wh" d="M338.47,425.02v-22.75h8.11c6.75,0,11.59,3.98,11.59,11.38s-4.84,11.37-11.59,11.37h-8.11ZM342.49,421.54h3.91c4.38,0,7.72-2.33,7.72-7.89s-3.34-7.89-7.72-7.89h-3.91v15.79Z"/><path class="pt-wh" d="M384.31,425.02v-22.75h8.36c4.63,0,8.47,1.65,8.47,6.75s-3.77,7.03-8.36,7.03h-4.45v8.97h-4.02ZM388.32,412.75h4.2c2.62,0,4.56-.79,4.56-3.63,0-2.98-2.15-3.37-4.56-3.37h-4.2v7Z"/><path class="pt-wh" d="M411.39,425.02v-22.75h16.36v3.48h-12.34v5.52h11.84v3.16h-11.84v7.11h12.17v3.48h-16.18Z"/><path class="pt-wh" d="M438.68,425.02v-22.75h8.36c4.63,0,8.47,1.65,8.47,6.75s-3.77,7.03-8.36,7.03h-4.45v8.97h-4.02ZM442.7,412.75h4.2c2.62,0,4.56-.79,4.56-3.63,0-2.98-2.15-3.37-4.56-3.37h-4.2v7Z"/><path class="pt-wh" d="M472.37,425.02v-19.23h-7.86v-3.48h19.7v3.48h-7.86v19.23h-3.98Z"/><path class="pt-wh" d="M494.24,425.02v-22.75h4.02v22.75h-4.02Z"/><path class="pt-wh" d="M510.46,425.02v-22.75h8.11c6.75,0,11.59,3.98,11.59,11.38s-4.84,11.37-11.59,11.37h-8.11ZM514.48,421.54h3.91c4.38,0,7.72-2.33,7.72-7.89s-3.34-7.89-7.72-7.89h-3.91v15.79Z"/><path class="pt-wh" d="M541.15,425.02v-22.75h16.36v3.48h-12.34v5.52h11.84v3.16h-11.84v7.11h12.17v3.48h-16.18Z"/><path class="pt-wh" d="M601.56,406.65l-8.36,18.37h-2.05l-10.41-22.75h4.38l7.03,16.36,7.39-16.36h3.98l7.43,16.36,7-16.36h4.41l-10.41,22.75h-2.05l-8.36-18.37Z"/><path class="pt-wh" d="M632.03,425.02v-22.75h16.36v3.48h-12.34v5.52h11.84v3.16h-11.84v7.11h12.17v3.48h-16.18Z"/><path class="pt-wh" d="M659.32,425.02v-22.71h4.02v19.23h11.95v3.48h-15.97Z"/><path class="pt-wh" d="M685.12,425.02v-22.71h4.02v19.23h11.95v3.48h-15.97Z"/><path class="pt-wh" d="M710.91,402.27h4.06l12.95,16.44v-16.44h4.02v22.75h-4.02l-12.99-16.51v16.51h-4.02v-22.75Z"/><path class="pt-wh" d="M744.22,425.02v-22.75h16.36v3.48h-12.34v5.52h11.84v3.16h-11.84v7.11h12.17v3.48h-16.18Z"/><path class="pt-wh" d="M779.16,405.43c-1.87,0-4.27.57-4.27,2.66,0,1.9,1.76,2.73,4.23,3.44l1.04.29c3.37.97,7.36,2.15,7.36,6.82,0,4.95-4.7,6.75-9.01,6.75-3.01,0-6.32-.93-8.76-2.8v-3.7c2.4,1.9,6.1,3.05,9.19,3.05,2.22,0,4.38-.61,4.38-3.09,0-2.04-2.37-2.69-5.02-3.44l-1.58-.43c-3.12-.97-6.03-2.69-6.03-6.67,0-4.84,4.41-6.39,8.58-6.39,2.83,0,5.56.97,7.11,1.83v3.88c-1.36-1.04-4.56-2.19-7.21-2.19Z"/><path class="pt-wh" d="M806.14,405.43c-1.87,0-4.27.57-4.27,2.66,0,1.9,1.76,2.73,4.23,3.44l1.04.29c3.37.97,7.36,2.15,7.36,6.82,0,4.95-4.7,6.75-9.01,6.75-3.01,0-6.32-.93-8.76-2.8v-3.7c2.4,1.9,6.1,3.05,9.19,3.05,2.22,0,4.38-.61,4.38-3.09,0-2.04-2.37-2.69-5.02-3.44l-1.58-.43c-3.12-.97-6.03-2.69-6.03-6.67,0-4.84,4.41-6.39,8.58-6.39,2.83,0,5.56.97,7.11,1.83v3.88c-1.36-1.04-4.56-2.19-7.21-2.19Z"/></g>
+      <g><path class="pt-wh" d="M56.99,227.01H0v72.97c6.84-9.74,18.18-16.11,30.97-16.11v-33.27h20.45c16.1.39,24.35,7.04,24.78,19.95-.43,12.67-8.37,19.3-23.89,19.92-.29.02-.58.03-.89.03h-20.45c-15.82,0-28.95,11.83-30.97,27.13v43.01h30.97v-47.17h22.92c2.47,0,4.84-.07,7.14-.2.61-.03,1.23-.07,1.82-.12.44-.03.87-.07,1.3-.1.17-.02.36-.03.53-.05.43-.03.85-.07,1.28-.14.6-.05,1.19-.12,1.77-.2,27.45-3.41,41.01-17.85,40.65-43.31-1.23-27.4-18.37-41.52-51.4-42.32Z"/><path class="pt-wh" d="M207.02,305.08c0,23.04-9.72,34.56-29.18,34.56-20.29-.41-30.63-11.72-31.04-33.94v-78.76h-31.04v78.76c.41,39.19,20.48,58.78,60.21,58.78,41.79,0,62.69-20,62.69-59.99v-77.55h-31.65v78.15Z"/><path class="pt-wh" d="M368.72,266.86c-1.16-23.97-16.21-37.16-45.15-39.57-.63-.05-1.26-.1-1.89-.14-.44-.03-.89-.05-1.35-.08-.19,0-.36-.02-.55-.03l-1.38-.05c-.58-.02-1.16-.03-1.74-.05h-62.6v1.38c4.38,12.92,16.62,22.21,30.98,22.21h26.65c16.94-.41,25,5.65,24.18,18.14.41,11.7-7.66,17.56-24.18,17.56h-26.65v-28.73c-12.54,0-23.73-5.85-30.98-14.96v118.1h30.98v-52.04h17.98l34.09,52.06h39.04l-40.92-53.87c22.73-4.44,33.88-17.74,33.48-39.92Z"/><polygon class="pt-wh" points="534.77 251.74 579.39 251.74 579.39 360.63 610.99 360.63 610.99 251.74 654.99 251.74 654.99 226.93 534.77 226.93 534.77 251.74"/><rect class="pt-wh" x="665.2" y="226.9" width="31.62" height="133.73"/><path class="pt-wh" d="M750.98,226.9h-42.77v118.9c7.25-9.56,18.72-15.74,31.62-15.74v-78.35h10.53c27.68.39,41.95,14.11,42.77,41.15.36,25.84-10.27,40.35-31.88,43.5-1.01.15-2.01.27-3.05.36-.82.08-1.66.15-2.51.19-.39.03-.78.05-1.18.07-1.11.05-2.25.07-3.43.05h-11.25c-14.88,0-27.48,9.98-31.44,23.6h44.44c6.52.2,12.61.02,18.26-.6.63-.05,1.28-.14,1.89-.22.44-.03.89-.1,1.31-.17.19-.02.38-.03.55-.09.44-.05.89-.12,1.33-.2.63-.07,1.25-.19,1.86-.31,33.31-5.96,49.29-28.01,47.94-66.18-.84-43.57-25.82-65.55-75.01-65.96Z"/><polygon class="pt-wh" points="867.64 337.03 867.64 305.56 937.07 305.56 937.07 280.74 867.64 280.74 867.64 251.71 943.96 251.73 943.96 226.91 836.65 226.9 836.65 360.63 943.88 360.63 943.88 337.03 867.64 337.03"/><polygon class="pt-wh" points="415.56 337.03 415.56 305.56 484.98 305.56 484.98 280.74 415.56 280.74 415.56 251.71 491.87 251.73 491.87 226.91 384.56 226.9 384.56 360.63 491.79 360.63 491.79 337.03 415.56 337.03"/></g>
+      <g><path class="pt-wh" d="M574.56,105.57c-22.58,3.11-45.39-.9-65.45-13.41l-29.46-18.37c-18.45-11.52-40.08-12.51-58.6-2.64-22.73,12.11-32.05,23.36-54.71,29.77l-.28-43.66c38.23-26.59,74.18-46.17,121.41-25.17,33.63,14.95,45.66,37.4,86.88,34.65l.2,38.82Z"/><path class="pt-wh" d="M574.4,121.74v40.2c-71.42,7.71-99.9-42.95-171.72-12.9-11.8,4.92-23.01,8.14-36.38,11.56l.08-42.79,31.62-10.89c36.34-12.55,76.58-9.79,112.29,3.66,21.04,7.91,40.94,11.01,64.11,11.17Z"/><circle class="pt-wh" cx="554.64" cy="23.25" r="23.25"/></g>
     </svg>
     <h2 class="section-title section-title-light">Our peptides. Your confidence.</h2>
-    <p class="section-subtitle section-subtitle-light">We built Pure Tide to solve one problem: access to research-grade peptides you can actually trust. Here is what sets us apart.</p>
+    <p class="section-subtitle section-subtitle-light">We built PureTide to solve one problem: access to research-grade peptides you can actually trust. Here is what sets us apart.</p>
     <div class="trust-grid">
       <div class="trust-card">
         <div class="trust-icon">&#127464;&#127462;</div>
@@ -954,12 +958,12 @@
 
     <div class="coa-explainer">
       <h4>What is a Certificate of Analysis (COA)?</h4>
-      <p>A Certificate of Analysis is an official document issued by an independent, accredited laboratory confirming what is in a compound and at what concentration. It verifies the identity of the peptide, its purity level, and that no contaminants are present. Every Pure Tide product page links to the COA for that batch so you can review the results before purchasing. All testing is conducted by <a href="https://testides.com" target="_blank" rel="noopener">Testides</a>, a Canadian lab operating to premium analytical standards.</p>
+      <p>A Certificate of Analysis is an official document issued by an independent, accredited laboratory confirming what is in a compound and at what concentration. It verifies the identity of the peptide, its purity level, and that no contaminants are present. Every PureTide product page links to the COA for that batch so you can review the results before purchasing. All testing is conducted by <a href="https://testides.com" target="_blank" rel="noopener">Testides</a>, a Canadian lab operating to premium analytical standards.</p>
     </div>
 
     <div class="dark-cta-row">
       <p>Every batch is independently verified. Every order ships from Canada. Zero compromise on purity.</p>
-      <a href="/shop" class="btn-skyre">View Full Catalogue &rarr;</a>
+      <a href="https://puretide.ca/shop" class="btn-skyre">View Full Catalogue &rarr;</a>
     </div>
   </div>
 </section>
@@ -979,47 +983,47 @@
 
       <div class="faq-item">
         <button class="faq-question" onclick="toggle(this)">How are research peptides typically administered?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="faq-answer"><div class="faq-answer-inner"><p>Administration methods vary by compound and research application. In laboratory research settings, peptides are commonly reconstituted with bacteriostatic water and administered via subcutaneous or intramuscular injection. Some peptides are studied in nasal spray form (such as Semax and Selank). Oral administration is generally less studied for most peptides due to degradation in the digestive tract.</p><p>Pure Tide products are sold as lyophilized (freeze-dried) powder for research purposes only. See the Lyophilization section above for full preparation guidance.</p></div></div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Administration methods vary by compound and research application. In laboratory research settings, peptides are commonly reconstituted with bacteriostatic water and administered via subcutaneous or intramuscular injection. Some peptides are studied in nasal spray form (such as Semax and Selank). Oral administration is generally less studied for most peptides due to degradation in the digestive tract.</p><p>PureTide products are sold as lyophilized (freeze-dried) powder for research purposes only. See the Lyophilization section above for full preparation guidance.</p></div></div>
       </div>
 
       <div class="faq-item">
         <button class="faq-question" onclick="toggle(this)">What does "third-party tested" actually mean?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="faq-answer"><div class="faq-answer-inner"><p>Third-party testing means an independent laboratory (not the manufacturer or the seller) has analysed the compound to verify its identity, purity, and stability. This is the gold standard because it removes the conflict of interest from the quality verification process.</p><p>At Pure Tide, every batch is tested by <a href="https://testides.com" target="_blank" rel="noopener" style="color:var(--teal-deep);font-weight:700;">Testides</a>, an independent Canadian lab. The Certificate of Analysis (COA) is available directly on each product page so you can verify results before purchasing.</p></div></div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Third-party testing means an independent laboratory (not the manufacturer or the seller) has analysed the compound to verify its identity, purity, and stability. This is the gold standard because it removes the conflict of interest from the quality verification process.</p><p>At PureTide, every batch is tested by <a href="https://testides.com" target="_blank" rel="noopener" style="color:var(--teal-deep);font-weight:700;">Testides</a>, an independent Canadian lab. The Certificate of Analysis (COA) is available directly on each product page so you can verify results before purchasing.</p></div></div>
       </div>
 
       <div class="faq-item">
         <button class="faq-question" onclick="toggle(this)">Are peptides legal in Canada?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="faq-answer"><div class="faq-answer-inner"><p>Research peptides occupy a regulatory space in Canada that varies by compound. Many peptides are not scheduled substances and are legally purchasable for research purposes. They are not approved by Health Canada as drugs, and Pure Tide sells all products explicitly for research use only, not for human or animal consumption.</p><p>It is your responsibility as a purchaser to understand and comply with the regulations applicable in your jurisdiction.</p></div></div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Research peptides occupy a regulatory space in Canada that varies by compound. Many peptides are not scheduled substances and are legally purchasable for research purposes. They are not approved by Health Canada as drugs, and PureTide sells all products explicitly for research use only, not for human or animal consumption.</p><p>It is your responsibility as a purchaser to understand and comply with the regulations applicable in your jurisdiction.</p></div></div>
       </div>
 
       <div class="faq-item">
         <button class="faq-question" onclick="toggle(this)">What is BPC-157 and why is it so popular?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="faq-answer"><div class="faq-answer-inner"><p>BPC-157 (Body Protective Compound 157) is a synthetic pentadecapeptide derived from a naturally occurring protein found in gastric juice. It is one of the most extensively studied peptides in the recovery and regenerative research space, with a substantial body of preclinical literature examining its influence on tissue recovery, joint health, and cellular regeneration pathways.</p><p>Its popularity stems from the breadth of its research profile and the fact that it appears to work through multiple mechanisms simultaneously, including growth factor pathways and angiogenesis.</p><p style="margin-top:14px;"><a href="/products/bpc-157" class="faq-shop-link">Shop BPC-157 &rarr;</a></p></div></div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>BPC-157 (Body Protective Compound 157) is a synthetic pentadecapeptide derived from a naturally occurring protein found in gastric juice. It is one of the most extensively studied peptides in the recovery and regenerative research space, with a substantial body of preclinical literature examining its influence on tissue recovery, joint health, and cellular regeneration pathways.</p><p>Its popularity stems from the breadth of its research profile and the fact that it appears to work through multiple mechanisms simultaneously, including growth factor pathways and angiogenesis.</p><p style="margin-top:14px;"><a href="https://puretide.ca/products/bpc-157" class="faq-shop-link">Shop BPC-157 &rarr;</a></p></div></div>
       </div>
 
       <div class="faq-item">
         <button class="faq-question" onclick="toggle(this)">What is Retatrutide and how is it different?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="faq-answer"><div class="faq-answer-inner"><p>Retatrutide (LY3437943) is a triple-agonist peptide that simultaneously activates three receptors: GLP-1, GIP, and glucagon. This triple-pathway approach is what separates it from both Ozempic (GLP-1 only) and Mounjaro (GLP-1 + GIP). The addition of glucagon receptor activation drives increased energy expenditure, a mechanism the other two do not include.</p><p>Phase 2 clinical trial data shows approximately 24% average weight reduction, the highest of the three. It is currently under continued research and is not approved for human use. Available from Pure Tide for research purposes only at &gt;99% purity.</p><p style="margin-top:14px;"><a href="/products/retatrutide" class="faq-shop-link">Shop Retatrutide &rarr;</a></p></div></div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Retatrutide (LY3437943) is a triple-agonist peptide that simultaneously activates three receptors: GLP-1, GIP, and glucagon. This triple-pathway approach is what separates it from both Ozempic (GLP-1 only) and Mounjaro (GLP-1 + GIP). The addition of glucagon receptor activation drives increased energy expenditure, a mechanism the other two do not include.</p><p>Phase 2 clinical trial data shows approximately 24% average weight reduction, the highest of the three. It is currently under continued research and is not approved for human use. Available from PureTide for research purposes only at &gt;99% purity.</p><p style="margin-top:14px;"><a href="https://puretide.ca/products/retatrutide" class="faq-shop-link">Shop Retatrutide &rarr;</a></p></div></div>
       </div>
 
       <div class="faq-item">
         <button class="faq-question" onclick="toggle(this)">What is GHK-Cu and what is it researched for?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="faq-answer"><div class="faq-answer-inner"><p>GHK-Cu (Copper Peptide) is a naturally occurring tripeptide found in human plasma, saliva, and urine. It is one of the most researched peptides in the skin and wound healing space, with a well-documented profile around collagen and elastin synthesis, antioxidant activity, and dermal repair pathways.</p><p>Beyond skin research, it has been studied for its potential role in nerve regeneration and anti-inflammatory activity. Its naturally occurring status and decades of safety research make it one of the more extensively characterised peptides available.</p><p style="margin-top:14px;"><a href="/products/ghk-cu" class="faq-shop-link">Shop GHK-Cu &rarr;</a></p></div></div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>GHK-Cu (Copper Peptide) is a naturally occurring tripeptide found in human plasma, saliva, and urine. It is one of the most researched peptides in the skin and wound healing space, with a well-documented profile around collagen and elastin synthesis, antioxidant activity, and dermal repair pathways.</p><p>Beyond skin research, it has been studied for its potential role in nerve regeneration and anti-inflammatory activity. Its naturally occurring status and decades of safety research make it one of the more extensively characterised peptides available.</p><p style="margin-top:14px;"><a href="https://puretide.ca/products/ghk-cu" class="faq-shop-link">Shop GHK-Cu &rarr;</a></p></div></div>
       </div>
 
       <div class="faq-item">
         <button class="faq-question" onclick="toggle(this)">What is TB-500?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="faq-answer"><div class="faq-answer-inner"><p>TB-500 is a synthetic analogue of Thymosin Beta-4, a naturally occurring peptide found throughout the body. It is most frequently studied for its role in tissue repair, particularly in muscle, tendon, and ligament recovery. Its research profile includes modulation of actin, a protein central to cell migration and wound healing.</p><p>It is very commonly stacked with BPC-157 (the Wolverine Stack) because the two compounds are believed to work through complementary pathways, one addressing the repair cascade at a local level while the other supports systemic recovery signalling.</p><p style="margin-top:14px;"><a href="/products/tb-500" class="faq-shop-link">Shop TB-500 &rarr;</a></p></div></div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>TB-500 is a synthetic analogue of Thymosin Beta-4, a naturally occurring peptide found throughout the body. It is most frequently studied for its role in tissue repair, particularly in muscle, tendon, and ligament recovery. Its research profile includes modulation of actin, a protein central to cell migration and wound healing.</p><p>It is very commonly stacked with BPC-157 (the Wolverine Stack) because the two compounds are believed to work through complementary pathways, one addressing the repair cascade at a local level while the other supports systemic recovery signalling.</p><p style="margin-top:14px;"><a href="https://puretide.ca/products/tb-500" class="faq-shop-link">Shop TB-500 &rarr;</a></p></div></div>
       </div>
 
       <div class="faq-item">
         <button class="faq-question" onclick="toggle(this)">What is Mots-C?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="faq-answer"><div class="faq-answer-inner"><p>Mots-C is a peptide encoded by mitochondrial DNA, making it one of the more novel and unusual compounds in the peptide space. It is classified as a mitokine: a signalling molecule released by mitochondria in response to stress. Research has focused primarily on its role in metabolic regulation, insulin sensitivity, and energy homeostasis.</p><p>Emerging longevity research has also examined its relationship with age-related metabolic decline, as circulating Mots-C levels appear to decrease with age. It is one of the more recent additions to the Pure Tide catalogue, reflecting the evolving frontier of mitochondrial peptide science.</p><p style="margin-top:14px;"><a href="/products/mots-c" class="faq-shop-link">Shop Mots-C &rarr;</a></p></div></div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Mots-C is a peptide encoded by mitochondrial DNA, making it one of the more novel and unusual compounds in the peptide space. It is classified as a mitokine: a signalling molecule released by mitochondria in response to stress. Research has focused primarily on its role in metabolic regulation, insulin sensitivity, and energy homeostasis.</p><p>Emerging longevity research has also examined its relationship with age-related metabolic decline, as circulating Mots-C levels appear to decrease with age. It is one of the more recent additions to the PureTide catalogue, reflecting the evolving frontier of mitochondrial peptide science.</p><p style="margin-top:14px;"><a href="https://puretide.ca/products/mots-c" class="faq-shop-link">Shop Mots-C &rarr;</a></p></div></div>
       </div>
 
       <div class="faq-item">
         <button class="faq-question" onclick="toggle(this)">What is Tesamorelin?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="faq-answer"><div class="faq-answer-inner"><p>Tesamorelin is a synthetic analogue of Growth Hormone-Releasing Hormone (GHRH). It stimulates the pituitary gland to produce and release growth hormone in a pulsatile, physiologically natural manner. This is distinct from direct GH administration, which bypasses the body's own regulatory feedback loops.</p><p>It is one of the few peptides with an existing FDA approval: Egrifta, approved for the treatment of excess abdominal fat in adults with HIV-associated lipodystrophy. This makes it one of the most clinically validated compounds in our catalogue.</p><p style="margin-top:14px;"><a href="/products/tesamorelin" class="faq-shop-link">Shop Tesamorelin &rarr;</a></p></div></div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Tesamorelin is a synthetic analogue of Growth Hormone-Releasing Hormone (GHRH). It stimulates the pituitary gland to produce and release growth hormone in a pulsatile, physiologically natural manner. This is distinct from direct GH administration, which bypasses the body's own regulatory feedback loops.</p><p>It is one of the few peptides with an existing FDA approval: Egrifta, approved for the treatment of excess abdominal fat in adults with HIV-associated lipodystrophy. This makes it one of the most clinically validated compounds in our catalogue.</p><p style="margin-top:14px;"><a href="https://puretide.ca/products/tesamorelin" class="faq-shop-link">Shop Tesamorelin &rarr;</a></p></div></div>
       </div>
 
       <div class="faq-item">
@@ -1034,7 +1038,7 @@
 
       <div class="faq-item">
         <button class="faq-question" onclick="toggle(this)">What is the difference between a peptide stack and individual compounds?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="faq-answer"><div class="faq-answer-inner"><p>A peptide stack is a pre-combined set of two or more individual compounds. Our stacks (like the Wolverine Stack, the Glow Stack, or CJC-1295 / Ipamorelin) are curated combinations that researchers commonly study together based on complementary mechanisms. Stacks offer a convenient way to research multiple compounds simultaneously, often at a better value than purchasing each separately.</p><p style="margin-top:14px;"><a href="/products/stacks" class="faq-shop-link">View All Stacks &rarr;</a></p></div></div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>A peptide stack is a pre-combined set of two or more individual compounds. Our stacks (like the Wolverine Stack, the Glow Stack, or CJC-1295 / Ipamorelin) are curated combinations that researchers commonly study together based on complementary mechanisms. Stacks offer a convenient way to research multiple compounds simultaneously, often at a better value than purchasing each separately.</p><p style="margin-top:14px;"><a href="https://puretide.ca/products/stacks" class="faq-shop-link">View All Stacks &rarr;</a></p></div></div>
       </div>
 
     </div>
@@ -1062,7 +1066,7 @@
     </div>
 
     <div class="disclaimer-body">
-      <p>All Pure Tide products are intended for research purposes only and are not approved by Health Canada or the FDA for human or animal consumption. The information on this page is provided for educational purposes only and does not constitute medical advice, diagnosis, or treatment recommendations.</p>
+      <p>All PureTide products are intended for research purposes only and are not approved by Health Canada or the FDA for human or animal consumption. The information on this page is provided for educational purposes only and does not constitute medical advice, diagnosis, or treatment recommendations.</p>
       <p>We are not doctors, pharmacists, or licensed healthcare providers. Nothing on this website should be interpreted as a suggestion to use these compounds on yourself or others. Always consult a qualified healthcare professional before beginning any new protocol.</p>
       <p>Do your own research. Be informed. Your health decisions are your own.</p>
     </div>
@@ -1072,24 +1076,24 @@
 <!-- CTA BANNER -->
 <section class="cta-banner">
   <h2>Ready to explore our catalogue?</h2>
-  <p>Every batch includes a Certificate of Analysis. Canadian-based. Third-party tested at Testides.</p>
+  <p>Every batch includes a Certificate of Analysis. Canadian-based. Third-party tested in Canada by <a href="https://testides.com" target="_blank" rel="noopener" style="color:var(--skyre);font-weight:700;text-decoration:none;">Testides</a>.</p>
   <div class="cta-actions">
-    <a href="/shop" class="btn-white">View All Products</a>
-    <a href="/calculator" class="btn-ghost">Dosage Calculator</a>
+    <a href="https://puretide.ca/shop" class="btn-white">View All Products</a>
+    <a href="https://puretide.ca/calculator" class="btn-ghost">Dosage Calculator</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 943.96 425.38" aria-label="Pure Tide">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 943.96 425.38" aria-label="PureTide">
     <style>.pt-foot{fill:#ffffff}</style>
     <g><path class="pt-foot" d="M574.56,105.57c-22.58,3.11-45.39-.9-65.45-13.41l-29.46-18.37c-18.45-11.52-40.08-12.51-58.6-2.64-22.73,12.11-32.05,23.36-54.71,29.77l-.28-43.66c38.23-26.59,74.18-46.17,121.41-25.17,33.63,14.95,45.66,37.4,86.88,34.65l.2,38.82Z"/><path class="pt-foot" d="M574.4,121.74v40.2c-71.42,7.71-99.9-42.95-171.72-12.9-11.8,4.92-23.01,8.14-36.38,11.56l.08-42.79,31.62-10.89c36.34-12.55,76.58-9.79,112.29,3.66,21.04,7.91,40.94,11.01,64.11,11.17Z"/><circle class="pt-foot" cx="554.64" cy="23.25" r="23.25"/></g>
   </svg>
-  <span class="footer-copy">&copy; 2026 Pure Tide Peptides. All rights reserved.</span>
+  <span class="footer-copy">&copy; 2026 PureTide Peptides. All rights reserved.</span>
   <ul class="footer-links">
-    <li><a href="/privacy">Privacy</a></li>
-    <li><a href="/terms">Terms</a></li>
-    <li><a href="/#contact">Contact</a></li>
+    <li><a href="https://puretide.ca/privacy">Privacy</a></li>
+    <li><a href="https://puretide.ca/terms">Terms</a></li>
+    <li><a href="https://puretide.ca/#contact">Contact</a></li>
   </ul>
 </footer>
 
